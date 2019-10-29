@@ -68,7 +68,7 @@ if ($countRBS -eq 0){
     }
 
     try {
-        $msg = Remove-Item $rbsOrigFull -ErrorAction Stop -Verbose -Recurse *>&1
+        $msg = Remove-Item "$rbsOrigFull\*.*" -ErrorAction Stop -Verbose -Recurse *>&1
         Write-Log -EntryType Information -Message ($msg | Out-String)
         Write-Log -EntryType Information -Message "Файл(ы) удален(ы) в $rbsOrigFull"
     }

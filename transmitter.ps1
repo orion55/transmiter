@@ -103,6 +103,7 @@ else {
 	}
 }
 
+exit
 #есть ли xml-файлы в каталоге work?
 $xml1 = Get-ChildItem "$work\*.xml"
 $count = ($xml1 | Measure-Object).count
