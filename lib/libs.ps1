@@ -56,7 +56,7 @@ function createDir($dirList) {
 		}
 	}
 }
-function Test_dir($dirs1) {
+<#function Test_dir($dirs1) {
 	foreach ($d1 in $dirs1) {
 		#проверка существования путей
 		if (!(Test-Path -Path $d1)) {
@@ -78,4 +78,4 @@ function Test_files($files) {
 			Exit
 		}
 	}
-}
+}#>

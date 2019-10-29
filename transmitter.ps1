@@ -24,12 +24,15 @@ Start-HostLog -LogLevel Information
 
 Start-FileLog -LogLevel Information -FilePath $logName -Append
 
+#проверяем существуют ли нужные пути и файлы
+testDir(@($work, $gni, $util, $vdkeys, $311Dir, $311Archive))
+testFiles(@($arj32, $spki, $recList, $311_cp, $fizik311_cp, $311jur_cp, $nalog_final1))
+
 #меню для ввода с клавиатуры
 if ($debug) {
 	Remove-Item -Path "$work\*.*"
 	Copy-Item -Path "$tmp\work1\RBS\*.*" -Destination "$311Dir\RBS"
 	Copy-Item -Path "$tmp\work1\WAY4\*.*" -Destination "$311Dir\WAY4"
-
 
 	$nobegin = $false
 	$form = '311p'
@@ -104,7 +107,6 @@ else {
 	}
 }
 
-exit
 #есть ли xml-файлы в каталоге work?
 $xml1 = Get-ChildItem "$work\*.xml"
 $count = ($xml1 | Measure-Object).count
@@ -114,7 +116,7 @@ if ($count -eq 0) {
 }
 
 #проверяем действительно ли файлы скопированы - московский сервер периодически может отваливаться
-if (!($nobegin)) {
+if (!$debug -and !($nobegin)) {
 	$title = "Проверка копирования"
 	$message = "Файлы отчетности корректно скопированы в папку Work?"
 	$yes = New-Object System.Management.Automation.Host.ChoiceDescription "Да - &0", "Да"
@@ -126,28 +128,23 @@ if (!($nobegin)) {
 	}
 }
 
-#проверяем существуют ли нужные пути и файлы
-$dir_arr = @($work, $scripts, $disk_sig, $disk_crypt, $gni)
-Test_dir($dir_arr)
-
-$files_arr = @($script_sig, $script_sig_crypt, $verba, $arj32, $311_cp, $fizik311_cp, $nalog_final1, $311jur_cp)
-Test_files($files_arr)
-
 #проверяем есть ли диск А
 $disks = (Get-PSDrive -PSProvider FileSystem).Name
 if ($disks -notcontains "a") {
-	Write-Host -ForegroundColor Red "Диск А не найден!"
+	Write-Log -EntryType Error -Message "Диск А не найден!"
 	exit
 }
 
 #сохраняем текущею ключевую дискету
-Write-Host -ForegroundColor Green "Сохраняем текущею ключевую дискету"
+Write-Log -EntryType Information -Message "Сохраняем текущею ключевую дискету"
 $tmp_keys = "$curDir\tmp_keys"
 if (!(Test-Path $tmp_keys)) {
-	New-Item -ItemType directory -Path $tmp_keys | out-Null
+    New-Item -ItemType directory -Path $tmp_keys | out-Null
 }
 Copy_dirs -from 'a:' -to $tmp_keys
 Remove-Item 'a:' -Recurse -ErrorAction "SilentlyContinue"
+
+exit
 
 #подписываем отчеты
 Write-Host -ForegroundColor Green "Загружаем ключевую дискету $disk_sig"
