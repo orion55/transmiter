@@ -30,6 +30,7 @@ if ($debug) {
 	Copy-Item -Path "$tmp\work1\RBS\*.*" -Destination "$311Dir\RBS"
 	Copy-Item -Path "$tmp\work1\WAY4\*.*" -Destination "$311Dir\WAY4"
 
+
 	$nobegin = $false
 	$form = '311p'
 }
