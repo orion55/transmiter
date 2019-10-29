@@ -22,14 +22,18 @@ Set-Location $curDir
 Clear-Host
 Start-HostLog -LogLevel Information
 
-$curDate = Get-Date -Format "ddMMyyyy"
-[string]$logName = (Get-Item $PSCommandPath ).DirectoryName + "\log\" + $curDate + "_trans.log"
-[string]$logSpki = (Get-Item $PSCommandPath ).DirectoryName + "\log\" + $curDate + "_spki_tr.log"
-
 Start-FileLog -LogLevel Information -FilePath $logName -Append
 
 #меню для ввода с клавиатуры
-if ($form -eq "none") {
+if ($debug) {
+	Remove-Item -Path "$work\*.*"
+	Copy-Item -Path "$tmp\work1\RBS\*.*" -Destination "$311Dir\RBS"
+	Copy-Item -Path "$tmp\work1\WAY4\*.*" -Destination "$311Dir\WAY4"
+
+	$nobegin = $false
+	$form = '311p'
+}
+elseif ($form -eq "none") {
 	$title = "Отправка отчетности"
 	$message = "Выберите формы для отправки отчетности:"
 	$311p_1 = New-Object System.Management.Automation.Host.ChoiceDescription "311-форма для физ. лиц - &0", "311p"
@@ -64,6 +68,12 @@ if ($form -eq "none") {
 
 if ($nobegin) {
 	Write-Log -EntryType Information -Message "Автоматическое копирование в папку $work произведено не было!"
+}
+
+$files3 = Get-ChildItem -Path $work -File *.*
+if (($files3 | Measure-Object).count -gt 0) {
+	Write-Log -EntryType Error -Message "Найдены файлы в каталоге $work"
+	exit
 }
 
 #копируем файлы отчетности в каталого $work

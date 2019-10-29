@@ -4,7 +4,7 @@ $curDir = Split-Path -Path $myInvocation.MyCommand.Path -Parent
 [string]$tmp = "$curDir\temp"
 
 #рабочий каталог, где будут подписываться и шифроваться файлы
-[string]$work = "$tmp\Work"
+[string]$work = "$tmp\work"
 #маска поиска отчетов
 [string]$mask = "*.xml"
 
@@ -15,17 +15,24 @@ $arj32 ="$curDir\util\arj32.exe"
 [string]$recList = "$curDir\util\Reclist.conf"
 
 #первоначальное копирование отчетности в папку work
-[string]$311_cp = "$util\311_cp.ps1"
+[string]$311_cp = "$lib\311_cp.ps1"
 
 #копирование архива 311 формы на отправку
-[string]$fizik311_cp = "$util\fizik311_cp.ps1"
+[string]$fizik311_cp = "$lib\fizik311_cp.ps1"
 #копирование файлов для налоговой в архив
-[string]$311jur_cp = "$util\311jur_cp.ps1"
+[string]$311jur_cp = "$lib\311jur_cp.ps1"
 #копирование архива для налоговой на отправку
-[string]$nalog_final1 = "$util\nalog_final1.ps1"
+[string]$nalog_final1 = "$lib\nalog_final1.ps1"
 
 #каталог на московском сервере, с отчетами для налоговой
 [string]$gni = "$tmp\GNI"
+
+$311Dir = "$tmp\311pMsk"
+$311Archive = "$tmp\311p\Arhive"
+
+$curDate = Get-Date -Format "ddMMyyyy"
+[string]$logName = $curDir + "\log\" + $curDate + "_trans.log"
+[string]$logSpki = $curDir + "\log\" + $curDate + "_spki_tr.log"
 
 
 
@@ -41,3 +48,6 @@ $disk_crypt = "c:\DISKET2019\Disk\disk21"
 
 #путь до программы шифрования и архиватор
 $verba = "c:\Program Files\MDPREI\РМП Верба-OW\FColseOW.exe"
+
+#$311Dir = "\\191.168.7.14\RBS\TMN\311p"
+#$311Archive = "\\tmn-ts-01\311p\Arhive"

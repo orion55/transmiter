@@ -21,3 +21,42 @@
 [2019-10-29 16:07:19Z] - INFO - Обработка отчетности - 311p
 [2019-10-29 16:07:21Z] - INFO - Файлы отчетности не будут скопированы в папку C:\SKAD\transmiter\temp\Work
 [2019-10-29 16:07:21Z] - INFO - Автоматическое копирование в папку C:\SKAD\transmiter\temp\Work произведено не было!
+[2019-10-29 16:40:05Z] - ERRR - Количество вложенных папок в C:\SKAD\transmiter\temp\311pMsk\RBS не равно 1
+[2019-10-29 16:40:28Z] - INFO - Начало копирования файлов...
+[2019-10-29 16:40:32Z] - ERRR - Не найдены файлы в C:\SKAD\transmiter\temp\311pMsk\RBS\
+[2019-10-29 16:40:36Z] - ERRR - Не найдены файлы в C:\SKAD\transmiter\temp\311pMsk\WAY4
+[2019-10-29 16:46:33Z] - ERRR - Количество вложенных папок в C:\SKAD\transmiter\temp\311pMsk\RBS не равно 1
+[2019-10-29 16:46:33Z] - INFO - Начало копирования файлов...
+[2019-10-29 16:46:33Z] - INFO - Performing the operation "Copy File" on target "Item: C:\SKAD\transmiter\temp\311pMsk\RBS\SFC217102803_720320191029_288000021900088087_700.XML Destination: C:\SKAD\transmiter\temp\311p\Arhive\29102019\RBS\SFC21710280
+3_720320191029_288000021900088087_700.XML".
+Performing the operation "Copy File" on target "Item: C:\SKAD\transmiter\temp\311pMsk\RBS\SFC217102803_720320191029_288000021900088088_700.XML Destination: C:\SKAD\transmiter\temp\311p\Arhive\29102019\RBS\SFC21710280
+3_720320191029_288000021900088088_700.XML".
+
+[2019-10-29 16:46:33Z] - INFO - Файл(ы) скопирован(ы) в C:\SKAD\transmiter\temp\311p\Arhive\29102019\RBS
+[2019-10-29 16:46:33Z] - INFO - Performing the operation "Copy File" on target "Item: C:\SKAD\transmiter\temp\311pMsk\RBS\SFC217102803_720320191029_288000021900088087_700.XML Destination: C:\SKAD\transmiter\temp\work\SFC217102803_720320191029_28800
+0021900088087_700.XML".
+Performing the operation "Copy File" on target "Item: C:\SKAD\transmiter\temp\311pMsk\RBS\SFC217102803_720320191029_288000021900088088_700.XML Destination: C:\SKAD\transmiter\temp\work\SFC217102803_720320191029_28800
+0021900088088_700.XML".
+
+[2019-10-29 16:46:33Z] - INFO - Файл(ы) скопирован(ы) в C:\SKAD\transmiter\temp\work
+[2019-10-29 16:46:33Z] - INFO - Performing the operation "Remove Directory" on target "C:\SKAD\transmiter\temp\311pMsk\RBS\".
+Performing the operation "Remove File" on target "C:\SKAD\transmiter\temp\311pMsk\RBS\SFC217102803_720320191029_288000021900088087_700.XML".
+Performing the operation "Remove File" on target "C:\SKAD\transmiter\temp\311pMsk\RBS\SFC217102803_720320191029_288000021900088088_700.XML".
+
+[2019-10-29 16:46:33Z] - INFO - Файл(ы) удален(ы) в C:\SKAD\transmiter\temp\311pMsk\RBS\
+[2019-10-29 16:46:33Z] - INFO - Performing the operation "Copy File" on target "Item: C:\SKAD\transmiter\temp\311pMsk\WAY4\SFC017102803_720320191029_288000021901061098_700.xml Destination: C:\SKAD\transmiter\temp\311p\Arhive\29102019\WAY4\SFC017102
+803_720320191029_288000021901061098_700.xml".
+Performing the operation "Copy File" on target "Item: C:\SKAD\transmiter\temp\311pMsk\WAY4\SFC127102803_720320191029_288000021801035442_701.xml Destination: C:\SKAD\transmiter\temp\311p\Arhive\29102019\WAY4\SFC127102
+803_720320191029_288000021801035442_701.xml".
+
+[2019-10-29 16:46:33Z] - INFO - Файл(ы) скопирован(ы) в C:\SKAD\transmiter\temp\311p\Arhive\29102019\WAY4
+[2019-10-29 16:46:33Z] - INFO - Performing the operation "Copy File" on target "Item: C:\SKAD\transmiter\temp\311pMsk\WAY4\SFC017102803_720320191029_288000021901061098_700.xml Destination: C:\SKAD\transmiter\temp\work\SFC017102803_720320191029_2880
+00021901061098_700.xml".
+Performing the operation "Copy File" on target "Item: C:\SKAD\transmiter\temp\311pMsk\WAY4\SFC127102803_720320191029_288000021801035442_701.xml Destination: C:\SKAD\transmiter\temp\work\SFC127102803_720320191029_2880
+00021801035442_701.xml".
+
+[2019-10-29 16:46:33Z] - INFO - Файл(ы) скопирован(ы) в C:\SKAD\transmiter\temp\work
+[2019-10-29 16:46:33Z] - INFO - Performing the operation "Remove File" on target "C:\SKAD\transmiter\temp\311pMsk\WAY4\SFC017102803_720320191029_288000021901061098_700.xml".
+Performing the operation "Remove File" on target "C:\SKAD\transmiter\temp\311pMsk\WAY4\SFC127102803_720320191029_288000021801035442_701.xml".
+
+[2019-10-29 16:46:33Z] - INFO - Файл(ы) удален(ы) в C:\SKAD\transmiter\temp\311pMsk\WAY4
