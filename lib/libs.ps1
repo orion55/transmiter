@@ -1,4 +1,4 @@
-function ClearUI{
+function ClearUI {
 	$bckgrnd = "DarkBlue"
 	$Host.UI.RawUI.BackgroundColor = $bckgrnd
 	$Host.UI.RawUI.ForegroundColor = 'White'
@@ -14,15 +14,15 @@ function ClearUI{
 }
 
 #Проверяем существуют ли каталоги?
-function testDir($dirList){	
-	if ($dirList){
-		foreach ($curPath in $dirList){
+function testDir($dirList) {
+	if ($dirList) {
+		foreach ($curPath in $dirList) {
 			#проверка существования путей
 			if ($curPath) {
-				if (!(Test-Path -Path $curPath)){
+				if (!(Test-Path -Path $curPath)) {
 					Write-Host -ForegroundColor Red "Путь $curPath не найден!!!"
-					Write-Host -ForegroundColor Red "Нажмите любую клавишу для продолжения" 
-					Read-Host "Нажмите Enter"			
+					Write-Host -ForegroundColor Red "Нажмите любую клавишу для продолжения"
+					Read-Host "Нажмите Enter"
 					Exit
 				}
 			}
@@ -31,14 +31,14 @@ function testDir($dirList){
 }
 
 #Проверяем существуют ли файлы?
-function testFiles($filesList){
+function testFiles($filesList) {
 	if ($filesList) {
-		foreach ($curFile in $filesList){
+		foreach ($curFile in $filesList) {
 			#проверка существования файлов
-			if (!(Test-Path $curFile)){
+			if (!(Test-Path $curFile)) {
 				Write-Host -ForegroundColor Red "Файл $curFile не найден!"
-				Write-Host -ForegroundColor Red "Нажмите любую клавишу для продолжения"  
-				Read-Host "Нажмите Enter"			
+				Write-Host -ForegroundColor Red "Нажмите любую клавишу для продолжения"
+				Read-Host "Нажмите Enter"
 				Exit
 			}
 		}
@@ -46,13 +46,36 @@ function testFiles($filesList){
 }
 
 #Проверяем существуют ли каталоги, если не существует, то создаём?
-function createDir($dirList){
+function createDir($dirList) {
 	if ($dirList) {
-		foreach ($curPath in $dirList){
+		foreach ($curPath in $dirList) {
 			#проверка существования путей
-			if (!(Test-Path -Path $curPath)){
+			if (!(Test-Path -Path $curPath)) {
 				New-Item -ItemType directory -Path $curPath | out-Null
 			}
+		}
+	}
+}
+function Test_dir($dirs1) {
+	foreach ($d1 in $dirs1) {
+		#проверка существования путей
+		if (!(Test-Path -Path $d1)) {
+			Write-Host "Путь $d1 не найден!" -ForegroundColor Red
+			Write-Host "Нажмите любую клавишу для продолжения"
+			Read-Host "Нажмите Enter"
+			Exit
+		}
+	}
+}
+
+function Test_files($files) {
+	foreach ($f1 in $files) {
+		#проверка существования файлов
+		if (!(Test-Path $f1)) {
+			Write-Host "Файл $f1 не найден!" -ForegroundColor Red
+			Write-Host "Нажмите любую клавишу для продолжения"
+			Read-Host "Нажмите Enter"
+			Exit
 		}
 	}
 }
