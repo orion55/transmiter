@@ -1,4 +1,4 @@
-<#function Verba_script($scrpt_name) {
+﻿<#function Verba_script($scrpt_name) {
     $tmp = "$curDir\tmp"
 
     do {

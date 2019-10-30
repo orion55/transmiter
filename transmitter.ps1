@@ -139,17 +139,16 @@ if ($disks -notcontains "a") {
 Write-Log -EntryType Information -Message "Сохраняем текущею ключевую дискету"
 $tmp_keys = "$curDir\tmp_keys"
 if (!(Test-Path $tmp_keys)) {
-    New-Item -ItemType directory -Path $tmp_keys | out-Null
+	New-Item -ItemType directory -Path $tmp_keys | out-Null
 }
 Copy_dirs -from 'a:' -to $tmp_keys
 Remove-Item 'a:' -Recurse -ErrorAction "SilentlyContinue"
 
-exit
-
 #подписываем отчеты
-Write-Host -ForegroundColor Green "Загружаем ключевую дискету $disk_sig"
-Copy_dirs -from $disk_sig -to 'a:'
+Write-Log -EntryType Information -Message "Загружаем ключевую дискету $vdkeys"
+Copy_dirs -from $vdkeys -to 'a:'
 
+exit
 Verba_script($script_sig)
 
 #шифруем отчеты

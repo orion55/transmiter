@@ -10,7 +10,7 @@ $curDir = Split-Path -Path $myInvocation.MyCommand.Path -Parent
 
 [string]$arj32 ="$curDir\util\arj32.exe"
 [string]$spki = "C:\Program Files\MDPREI\spki\spki1utl.exe"
-[string]$vdkeys = "c:\SKAD\Floppy\DISKET2019-skad-test\test1"
+[string]$vdkeys = "d:\SKAD\Floppy\DISKET2019-skad-test\test1"
 [string]$profile = "OT_TestFOIV"
 [string]$recList = "$curDir\util\Reclist.conf"
 
