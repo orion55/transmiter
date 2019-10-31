@@ -235,24 +235,6 @@ else {
 }
 Write-Log -EntryType Information -Message $body
 
-<#Write-Host -ForegroundColor Green "Загружаем исходную ключевую дискету"
-Remove-Item 'a:' -Recurse -ErrorAction "SilentlyContinue"
-Copy_dirs -from $tmp_keys -to 'a:'
-Remove-Item $tmp_keys -Recurse
-
-#копируем в архив
-Write-Host "Помещаем в архив..." -ForegroundColor Cyan
-switch ($form) {
-	'311p' {
-		&$fizik311_cp
-	}
-	'nalog' {
-		&$nalog_final1
-	}
-	default {
-		exit
-	}
-}#>
 Write-Log -EntryType Information -Message "Конец работы скрипта!"
 
 Stop-FileLog
