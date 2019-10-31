@@ -1,4 +1,5 @@
-﻿#Программа для автоматизации отправки банковской отчетности
+﻿#Программа для автоматизации отправки банковской отчетности по форме 311p SKAD Signature для физ. и юр. лиц
+#(c) Гребенёв О.Е. 28.10.2019
 
 param (
 	[ValidateSet('311p', 'nalog')]
@@ -27,6 +28,8 @@ Start-FileLog -LogLevel Information -FilePath $logName -Append
 #проверяем существуют ли нужные пути и файлы
 testDir(@($work, $gni, $util, $vdkeys, $311Dir, $311Archive))
 testFiles(@($arj32, $spki, $recList, $311_cp, $fizik311_cp, $311jur_cp, $nalog_final1))
+
+Write-Log -EntryType Information -Message "Начало работы Transmiter SKAD Signature"
 
 #меню для ввода с клавиатуры
 if ($debug) {
@@ -135,6 +138,19 @@ if ($disks -notcontains "a") {
 	exit
 }
 
+[string]$archDir = ''
+if ($form -eq '311p') {
+	$archDir = $311Archive
+}
+elseif ($form -eq 'nalog') {
+	$archDir = $311JurArchive
+}
+
+$arhivePath = $archDir + '\' + $curDate
+if (!(Test-Path $arhivePath)) {
+	New-Item -ItemType directory -Path $arhivePath | out-Null
+}
+
 #сохраняем текущею ключевую дискету
 Write-Log -EntryType Information -Message "Сохраняем текущею ключевую дискету"
 $tmp_keys = "$curDir\tmp_keys"
@@ -144,56 +160,80 @@ if (!(Test-Path $tmp_keys)) {
 Copy_dirs -from 'a:' -to $tmp_keys
 Remove-Item 'a:' -Recurse -ErrorAction "SilentlyContinue"
 
-#подписываем отчеты
 Write-Log -EntryType Information -Message "Загружаем ключевую дискету $vdkeys"
 Copy_dirs -from $vdkeys -to 'a:'
 
-exit
-Verba_script($script_sig)
-
-#шифруем отчеты
-Write-Host -ForegroundColor Green "Загружаем ключевую дискету $disk_crypt"
-Remove-Item 'a:' -Recurse -ErrorAction "SilentlyContinue"
-Copy_dirs -from $disk_crypt -to 'a:'
-
-Verba_script($script_sig_crypt)
+#подписываем и шифруем отчеты
+SKAD_Encrypt -encrypt $true -maskFiles "*.xml"
 
 #сжимаем файлы и переносим в архив
-switch ($form) {
-	'311p' {
-		Set-Location $work
-		$date1 = Get-Date -UFormat "%y%m%d"
-		$fname = -join ("BN02803", $date1, "0001")
-		Write-Host "Начинаем архивацию $fname ..." -ForegroundColor Cyan
-		$AllArgs = @('m', $fname, '*.xml')
-		&$arj32	$AllArgs | Out-Null
-		Set-Location $curDir
-	}
-	'nalog' {
-		Set-Location $work
-		$date1 = Get-Date -UFormat "%y%m%d"
-		$fname = -join ("AN02803", $date1, "0001")
-		Write-Host "Начинаем архивацию $fname ..." -ForegroundColor Cyan
-		$AllArgs = @('m', $fname, '*.xml')
-		&$arj32 $AllArgs | Out-Null
-		Set-Location $curDir
-	}
-	'fts' { }
-	default {
-		exit
-	}
+Set-Location $work
+[string]$maskArch = ''
+
+if ($form -eq '311p') {
+	$maskArch = "BN02803"
+}
+elseif ($form -eq 'nalog') {
+	$maskArch = "AN02803"
 }
 
-#подписываем архив, если он не в ФТС
-if ($form -eq '311p' -or $form -eq 'nalog') {
-	Write-Host -ForegroundColor Green "Загружаем ключевую дискету $disk_sig"
-	Remove-Item 'a:' -Recurse -ErrorAction "SilentlyContinue"
-	Copy_dirs -from $disk_sig -to 'a:'
+$date1 = Get-Date -UFormat "%y%m%d"
 
-	Verba_script($script_sig)
+if ($debug) {
+	$afnFiles = Get-ChildItem "$arhivePath\$maskArch$date1*.arj.tst"
+}
+else {
+	$afnFiles = Get-ChildItem "$arhivePath\$maskArch$date1*.arj"
+}
+$afnCount = ($afnFiles | Measure-Object).count
+$afnCount++
+$afnCountStr = $afnCount.ToString("00000")
+
+$fname = $maskArch + $date1 + $afnCountStr + '.arj'
+
+Write-Log -EntryType Information -Message "Начинаем архивацию $fname ..."
+if ($debug) {
+	$AllArgs = @('a', '-e', "$work\$fname", "$work\*.xml.tst")
+}
+else {
+	$AllArgs = @('a', '-e', "$work\$fname", "$work\*.xml")
+}
+&$arj32	$AllArgs | Out-Null
+
+Set-Location $curDir
+
+#удаляем все файлы, кроме файла архива
+$msg = Remove-Item "$work\*.*" -Exclude $fname -Verbose *>&1
+Write-Log -EntryType Information -Message ($msg | Out-String)
+
+SKAD_Encrypt -encrypt $false -maskFiles "*.arj"
+
+if ($debug) {
+	$fname = $fname + ".tst"
 }
 
-Write-Host -ForegroundColor Green "Загружаем исходную ключевую дискету"
+Write-Log -EntryType Information -Message "Копируем файл архива $fname в $arhivePath"
+Copy-Item "$work\$fname" -Destination $arhivePath -Force
+Write-Log -EntryType Information -Message "Копируем файл архива $fname в $outcoming_post"
+Copy-Item "$work\$fname" -Destination $outcoming_post -Force
+
+$msg = Remove-Item "$work\$fname" -Verbose *>&1
+Write-Log -EntryType Information -Message ($msg | Out-String)
+
+Write-Log -EntryType Information -Message "Отправка почтового сообщения"
+if (Test-Connection $mail_server -Quiet -Count 2) {
+	$title = "Отправка в ИФНС SKAD Signatura $curDate"
+	$body = "Отправлено $countXML файлов"
+	$encoding = [System.Text.Encoding]::UTF8
+	Send-MailMessage -To $mail_addr -Body $body -Encoding $encoding -From $mail_from -Subject $title -SmtpServer $mail_server
+}
+else {
+	Write-Log -EntryType Error -Message "Не удалось соединиться с почтовым сервером $mail_server"
+}
+Write-Log -EntryType Information -Message $body
+exit
+
+<#Write-Host -ForegroundColor Green "Загружаем исходную ключевую дискету"
 Remove-Item 'a:' -Recurse -ErrorAction "SilentlyContinue"
 Copy_dirs -from $tmp_keys -to 'a:'
 Remove-Item $tmp_keys -Recurse
@@ -210,7 +250,7 @@ switch ($form) {
 	default {
 		exit
 	}
-}
+}#>
 Write-Log -EntryType Information -Message "Конец работы скрипта!"
 
 Stop-FileLog

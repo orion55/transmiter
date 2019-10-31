@@ -68,7 +68,46 @@ function Copy_dirs {
             }
         } -Force
 }
+function SKAD_Encrypt {
+    Param(
+        $encrypt = $false,
+        [string]$maskFiles = "*.*")
 
+    Write-Log -EntryType Information -Message "Начинаем преобразование..."
+    $mask = Get-ChildItem -path $work $maskFiles
+
+    foreach ($file in $mask) {
+        $tmpFile = $file.FullName + '.test'
+
+        $arguments = ''
+        if ($encrypt) {
+            $arguments = "-sign -encrypt -profile $profile -registry -algorithm 1.2.643.7.1.1.2.2 -in $($file.FullName) -out $tmpFile -reclist $recList -silent $logSpki"
+        }
+        else {
+            $arguments = "-sign -profile $profile -registry -algorithm 1.2.643.7.1.1.2.2 -data $($file.FullName) -out $tmpFile -reclist $recList -silent $logSpki"
+        }
+
+        Write-Log -EntryType Information -Message "Обрабатываем файл $($file.Name)"
+        Start-Process $spki $arguments -NoNewWindow -Wait
+    }
+
+    $testFiles = Get-ChildItem "$work\*.test"
+    if (($testFiles | Measure-Object).count -gt 0) {
+        $msg = $mask | Remove-Item -Verbose -Force *>&1
+        Write-Log -EntryType Information -Message ($msg | Out-String)
+        if ($debug) {
+            $msg = Get-ChildItem -path $work '*.test' | Rename-Item -NewName { $_.Name -replace '.test$', '.tst' } -Verbose *>&1
+        }
+        else {
+            $msg = Get-ChildItem -path $work '*.test' | Rename-Item -NewName { $_.Name -replace '.test$', '' } -Verbose *>&1
+        }
+        Write-Log -EntryType Information -Message ($msg | Out-String)
+    }
+    else {
+        Write-Log -EntryType Error -Message "Ошибка при работе программы $spki"
+        exit
+    }
+}
 function SKAD_Decrypt {
     Param(
         $decrypt = $false,

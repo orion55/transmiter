@@ -29,10 +29,14 @@ $curDir = Split-Path -Path $myInvocation.MyCommand.Path -Parent
 
 $311Dir = "$tmp\311pMsk"
 $311Archive = "$tmp\311p\Arhive"
+$311JurArchive = "$tmp\311jur\Arhive"
 
 $curDate = Get-Date -Format "ddMMyyyy"
 [string]$logName = $curDir + "\log\" + $curDate + "_trans.log"
 [string]$logSpki = $curDir + "\log\" + $curDate + "_spki_tr.log"
+
+[string]$outcoming_post = "$tmp\Post"
+
 
 
 
