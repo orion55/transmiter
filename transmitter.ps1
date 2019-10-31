@@ -77,12 +77,6 @@ if ($nobegin) {
 	Write-Log -EntryType Information -Message "Автоматическое копирование в папку $work произведено не было!"
 }
 
-$files3 = Get-ChildItem -Path $work -File *.*
-if (($files3 | Measure-Object).count -gt 0) {
-	Write-Log -EntryType Error -Message "Найдены файлы в каталоге $work"
-	exit
-}
-
 #копируем файлы отчетности в каталого $work
 if (!($nobegin)) {
 	switch ($form) {
@@ -190,7 +184,7 @@ else {
 }
 $afnCount = ($afnFiles | Measure-Object).count
 $afnCount++
-$afnCountStr = $afnCount.ToString("00000")
+$afnCountStr = $afnCount.ToString("0000")
 
 $fname = $maskArch + $date1 + $afnCountStr + '.arj'
 
@@ -234,6 +228,11 @@ else {
 	Write-Log -EntryType Error -Message "Не удалось соединиться с почтовым сервером $mail_server"
 }
 Write-Log -EntryType Information -Message $body
+
+Write-Log -EntryType Information -Message "Загружаем исходную ключевую дискету"
+Remove-Item 'a:' -Recurse -ErrorAction "SilentlyContinue"
+Copy_dirs -from $tmp_keys -to 'a:'
+Remove-Item $tmp_keys -Recurse -Force
 
 Write-Log -EntryType Information -Message "Конец работы скрипта!"
 
