@@ -37,7 +37,11 @@ $curDate = Get-Date -Format "ddMMyyyy"
 
 [string]$outcoming_post = "$tmp\Post"
 
-
+#настройка почты
+#[string]$mail_addr = "tmn-f365@tmn.apkbank.apk"
+[string]$mail_addr = "tmn-goe@tmn.apkbank.ru"
+[string]$mail_server = "191.168.6.50"
+[string]$mail_from = "robot311@tmn.apkbank.apk"
 
 
 

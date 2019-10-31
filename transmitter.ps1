@@ -163,6 +163,9 @@ Remove-Item 'a:' -Recurse -ErrorAction "SilentlyContinue"
 Write-Log -EntryType Information -Message "Загружаем ключевую дискету $vdkeys"
 Copy_dirs -from $vdkeys -to 'a:'
 
+$xmlFiles = Get-ChildItem -Path $work "*.xml"
+$countXML = ($xmlFiles | Measure-Object).count
+
 #подписываем и шифруем отчеты
 SKAD_Encrypt -encrypt $true -maskFiles "*.xml"
 
@@ -222,7 +225,7 @@ Write-Log -EntryType Information -Message ($msg | Out-String)
 
 Write-Log -EntryType Information -Message "Отправка почтового сообщения"
 if (Test-Connection $mail_server -Quiet -Count 2) {
-	$title = "Отправка в ИФНС SKAD Signatura $curDate"
+	$title = "Отправка в $curDate ИФНС - SKAD Signatura"
 	$body = "Отправлено $countXML файлов"
 	$encoding = [System.Text.Encoding]::UTF8
 	Send-MailMessage -To $mail_addr -Body $body -Encoding $encoding -From $mail_from -Subject $title -SmtpServer $mail_server
@@ -231,7 +234,6 @@ else {
 	Write-Log -EntryType Error -Message "Не удалось соединиться с почтовым сервером $mail_server"
 }
 Write-Log -EntryType Information -Message $body
-exit
 
 <#Write-Host -ForegroundColor Green "Загружаем исходную ключевую дискету"
 Remove-Item 'a:' -Recurse -ErrorAction "SilentlyContinue"
