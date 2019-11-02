@@ -22,7 +22,6 @@ Set-Location $curDir
 #ClearUI
 Clear-Host
 Start-HostLog -LogLevel Information
-
 Start-FileLog -LogLevel Information -FilePath $logName -Append
 
 #проверяем существуют ли нужные пути и файлы

@@ -17,8 +17,6 @@ $curDir = Split-Path -Path $myInvocation.MyCommand.Path -Parent
 #первоначальное копирование отчетности в папку work
 [string]$311_cp = "$lib\311_cp.ps1"
 
-#копирование архива 311 формы на отправку
-[string]$fizik311_cp = "$lib\fizik311_cp.ps1"
 #копирование файлов для налоговой в архив
 [string]$311jur_cp = "$lib\311jur_cp.ps1"
 
@@ -32,7 +30,6 @@ $311JurArchive = "$tmp\311jur\Arhive"
 $curDate = Get-Date -Format "ddMMyyyy"
 [string]$logName = $curDir + "\log\" + $curDate + "_trans.log"
 [string]$logSpki = $curDir + "\log\" + $curDate + "_spki_tr.log"
-
 [string]$outcoming_post = "$tmp\Post"
 
 #настройка почты
@@ -40,20 +37,3 @@ $curDate = Get-Date -Format "ddMMyyyy"
 [string]$mail_addr = "tmn-goe@tmn.apkbank.ru"
 [string]$mail_server = "191.168.6.50"
 [string]$mail_from = "robot311@tmn.apkbank.apk"
-
-
-
-#скрипты для подписи и шифрования
-$scripts = "$curDir\scripts"
-$script_sig = "$scripts\send440Sign.scr"
-$script_sig_crypt = "$scripts\send440Cript.scr"
-
-#дискеты для подписи и шифрования
-$disk_sig = "c:\DISKET2018-1\Disk\DISK2"
-$disk_crypt = "c:\DISKET2019\Disk\disk21"
-
-#путь до программы шифрования и архиватор
-$verba = "c:\Program Files\MDPREI\РМП Верба-OW\FColseOW.exe"
-
-#$311Dir = "\\191.168.7.14\RBS\TMN\311p"
-#$311Archive = "\\tmn-ts-01\311p\Arhive"
