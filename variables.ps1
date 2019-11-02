@@ -21,8 +21,6 @@ $curDir = Split-Path -Path $myInvocation.MyCommand.Path -Parent
 [string]$fizik311_cp = "$lib\fizik311_cp.ps1"
 #копирование файлов для налоговой в архив
 [string]$311jur_cp = "$lib\311jur_cp.ps1"
-#копирование архива для налоговой на отправку
-[string]$nalog_final1 = "$lib\nalog_final1.ps1"
 
 #каталог на московском сервере, с отчетами для налоговой
 [string]$gni = "$tmp\GNI"

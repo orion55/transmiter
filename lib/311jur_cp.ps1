@@ -1,60 +1,49 @@
-﻿[string]$curDir = Split-Path -Path $myInvocation.MyCommand.Path -Parent
+﻿[string]$currentDir = Split-Path -Path $myInvocation.MyCommand.Path -Parent
 
-$work_dir = "c:\WORK"
-#$work_dir = "$curDir\Work"
-
-$311dir = "\\tmn-ts-01\311jur"
-#$311dir = "$curDir\311jur"
-
-$logDir = "c:\transmiter\log"
-$archiveDir = "$311dir\Archive"
-
-Set-Location $curDir
-
+. $currentDir/../variables.ps1
 . $curDir/lib/libs.ps1
 . $curDir/lib/PSMultiLog.ps1
 
-
-testDir(@($311dir, $work_dir))
-createDir(@($logDir, $archiveDir))
-
-#есть ли xml-файлы в каталоге work?
-$xml1 = Get-ChildItem "$work_Dir\*.xml"
-$count = ($xml1|Measure-Object).count
-if ($count -eq 0){
-	Write-Host -ForegroundColor Red "Файлы в $work_dir не обнаружены!"
-	exit
-}
-
-$dt = Get-Date -Format "dd-MM-yyyy"
-$logName = $logDir+ "\" + $dt + "_LOG.log"
+Set-Location $curDir
 
 Start-HostLog -LogLevel Information
 Start-FileLog -LogLevel Information -FilePath $logName -Append
 
-$curDate = Get-Date -Format "ddMMyyyy"
+testDir(@($311JurArchive, $work, $gni))
 
-$archDirFull = "$archiveDir\$curDate"
-if (!(Test-Path -Path $archDirFull )){
-	New-Item -ItemType directory $archDirFull -Force | out-null	
+$archiveDir = "$311JurArchive\$curDate"
+if (!(Test-Path -Path $archiveDir )) {
+    New-Item -ItemType directory $archiveDir -Force | out-null
 }
-
-$workXml = Get-ChildItem -Path $work_dir "*.xml"
+$workXml = Get-ChildItem -Path $work "*.xml"
 $countWork = ($workXml | Measure-Object).count
-if ($countWork -eq 0){
-    Write-Log -EntryType Error -Message "Не найдены файлы в $work_dir"
-} else {
-    try {
-        Write-Log -EntryType Information -Message "Резервное копирование файлов в $archDirFull"
-        $msg = Copy-Item "$work_dir\*.xml" -Destination $archDirFull -ErrorAction Stop -Verbose -Force *>&1    
-        Write-Log -EntryType Information -Message ($msg | Out-String)  
-        Write-Log -EntryType Information -Message "Файл(ы) скопирован(ы) в $archDirFull"
+if ($countWork -eq 0) {
+    $gniFiles = Get-ChildItem -Path $gni "*.xml"
+    $gniCount = ($gniFiles | Measure-Object).count
+    if ($gniCount -gt 0) {
+        try {
+            $msg = Copy-Item -Path "$gni\*.xml" -Destination $work -Verbose -Force *>&1
+            Write-Log -EntryType Information -Message ($msg | Out-String)
+        }
+        catch {
+            Write-Log -EntryType Error -Message "Ошибка копирования файла(ов) в $work"
+            exit
+        }
     }
-    catch {    
-        Write-Log -EntryType Error -Message "Ошибка копирования файла(ов) в $archDirFull"
+    else {
+        Write-Log -EntryType Error -Message "Не найдены файлы в $gni"
         exit
     }
 }
-
-Stop-FileLog
-Stop-HostLog
+else {
+    try {
+        Write-Log -EntryType Information -Message "Резервное копирование файлов в $archiveDir"
+        $msg = Copy-Item "$work\*.xml" -Destination $archiveDir -ErrorAction Stop -Verbose -Force *>&1
+        Write-Log -EntryType Information -Message ($msg | Out-String)
+        Write-Log -EntryType Information -Message "Файл(ы) скопирован(ы) в $archiveDir"
+    }
+    catch {
+        Write-Log -EntryType Error -Message "Ошибка копирования файла(ов) в $archiveDir"
+        exit
+    }
+}

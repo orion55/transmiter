@@ -27,18 +27,23 @@ Start-FileLog -LogLevel Information -FilePath $logName -Append
 
 #проверяем существуют ли нужные пути и файлы
 testDir(@($work, $gni, $util, $vdkeys, $311Dir, $311Archive))
-testFiles(@($arj32, $spki, $recList, $311_cp, $fizik311_cp, $311jur_cp, $nalog_final1))
+testFiles(@($arj32, $spki, $recList, $311_cp, $311jur_cp))
 
 Write-Log -EntryType Information -Message "Начало работы Transmiter SKAD Signature"
 
 #меню для ввода с клавиатуры
 if ($debug) {
-	Remove-Item -Path "$work\*.*"
+	<#Remove-Item -Path "$work\*.*"
 	Copy-Item -Path "$tmp\work1\RBS\*.*" -Destination "$311Dir\RBS"
 	Copy-Item -Path "$tmp\work1\WAY4\*.*" -Destination "$311Dir\WAY4"
 
 	$nobegin = $false
-	$form = '311p'
+	$form = '311p'#>
+
+	Remove-Item -Path "$work\*.*"
+	Copy-Item -Path "$tmp\work1\*.*" -Destination $gni
+	$nobegin = $false
+	$form = 'nalog'
 }
 elseif ($form -eq "none") {
 	$title = "Отправка отчетности"
@@ -81,18 +86,7 @@ if ($nobegin) {
 if (!($nobegin)) {
 	switch ($form) {
 		'311p' { &$311_cp }
-		'nalog' {
-			$files2 = Get-ChildItem -Path $gni "*.xml"
-			$date2 = Get-Date -UFormat "%Y%m%d"
-			foreach ($f2 in $files2) {
-				$sub1 = $f2.Name.Substring(17, 8)
-				if ($sub1 -eq $date2) {
-					Copy-Item -Path "$gni\$f2" -Destination $work
-					Write-Log -EntryType Information -Message "Копируем файл $f2"
-				}
-			}
-			&$311jur_cp
-		}
+		'nalog' { &$311jur_cp }
 		default {
 			exit
 		}
@@ -217,10 +211,10 @@ Copy-Item "$work\$fname" -Destination $outcoming_post -Force
 $msg = Remove-Item "$work\$fname" -Verbose *>&1
 Write-Log -EntryType Information -Message ($msg | Out-String)
 
+$body = "Отправлено $countXML файлов"
 Write-Log -EntryType Information -Message "Отправка почтового сообщения"
 if (Test-Connection $mail_server -Quiet -Count 2) {
 	$title = "Отправка в $curDate ИФНС - SKAD Signatura"
-	$body = "Отправлено $countXML файлов"
 	$encoding = [System.Text.Encoding]::UTF8
 	Send-MailMessage -To $mail_addr -Body $body -Encoding $encoding -From $mail_from -Subject $title -SmtpServer $mail_server
 }
