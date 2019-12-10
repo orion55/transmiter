@@ -8,7 +8,11 @@ $curDir = Split-Path -Path $myInvocation.MyCommand.Path -Parent
 #маска поиска отчетов
 [string]$mask = "*.xml"
 
-[string]$arj32 ="$curDir\util\arj32.exe"
+#[string]$arj32 ="$curDir\util\arj32.exe"
+[string]$archiver = "$curDir\util\7z.exe"
+#[string]$extArchiver = "arj"
+[string]$extArchiver = "zip"
+
 [string]$spki = "C:\Program Files\MDPREI\spki\spki1utl.exe"
 [string]$vdkeys = "d:\SKAD\Floppy\DISKET2019-skad-test\test1"
 [string]$profile = "OT_TestFOIV"

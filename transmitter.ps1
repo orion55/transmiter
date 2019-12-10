@@ -9,7 +9,7 @@ param (
 	#$nobegin - будем копировать сообщения автоматически в папку Work или это уже сделано вручную
 )
 
-[boolean]$debug = $true
+[boolean]$debug = $false
 [string]$curDir = Split-Path -Path $myInvocation.MyCommand.Path -Parent
 Set-Location $curDir
 [string]$lib = "$curDir\lib"
@@ -26,7 +26,7 @@ Start-FileLog -LogLevel Information -FilePath $logName -Append
 
 #проверяем существуют ли нужные пути и файлы
 testDir(@($work, $gni, $util, $vdkeys, $311Dir, $311Archive))
-testFiles(@($arj32, $spki, $recList, $311_cp, $311jur_cp))
+testFiles(@($archiver, $spki, $recList, $311_cp, $311jur_cp))
 
 Write-Log -EntryType Information -Message "Начало работы Transmiter SKAD Signature"
 
@@ -170,25 +170,35 @@ elseif ($form -eq 'nalog') {
 $date1 = Get-Date -UFormat "%y%m%d"
 
 if ($debug) {
-	$afnFiles = Get-ChildItem "$arhivePath\$maskArch$date1*.arj.tst"
+	$afnFiles = Get-ChildItem "$arhivePath\$maskArch$date1*.$extArchiver.tst"
 }
 else {
-	$afnFiles = Get-ChildItem "$arhivePath\$maskArch$date1*.arj"
+	$afnFiles = Get-ChildItem "$arhivePath\$maskArch$date1*.$extArchiver"
 }
 $afnCount = ($afnFiles | Measure-Object).count
 $afnCount++
 $afnCountStr = $afnCount.ToString("0000")
 
-$fname = $maskArch + $date1 + $afnCountStr + '.arj'
+$fname = $maskArch + $date1 + $afnCountStr + "." + $extArchiver
 
 Write-Log -EntryType Information -Message "Начинаем архивацию $fname ..."
 if ($debug) {
-	$AllArgs = @('a', '-e', "$work\$fname", "$work\*.xml.tst")
+	if ($extArchiver -eq 'arj') {
+		$AllArgs = @('a', '-e', "$work\$fname", "$work\*.xml.tst")
+	}
+	if ($extArchiver -eq 'zip') {
+		$AllArgs = @('a', '-tzip', '-ssw', "$work\$fname", "$work\*.xml.tst")
+	}
 }
 else {
-	$AllArgs = @('a', '-e', "$work\$fname", "$work\*.xml")
+	if ($extArchiver -eq 'arj') {
+		$AllArgs = @('a', '-e', "$work\$fname", "$work\*.xml")
+	}
+	if ($extArchiver -eq 'zip') {
+		$AllArgs = @('a', '-tzip', '-ssw', "$work\$fname", "$work\*.xml")
+	}
 }
-&$arj32	$AllArgs | Out-Null
+&$archiver	$AllArgs | Out-Null
 
 Set-Location $curDir
 
@@ -196,7 +206,7 @@ Set-Location $curDir
 $msg = Remove-Item "$work\*.*" -Exclude $fname -Verbose *>&1
 Write-Log -EntryType Information -Message ($msg | Out-String)
 
-SKAD_Encrypt -encrypt $false -maskFiles "*.arj"
+SKAD_Encrypt -encrypt $false -maskFiles "*.$extArchiver"
 
 if ($debug) {
 	$fname = $fname + ".tst"

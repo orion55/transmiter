@@ -1,0 +1,44 @@
+﻿[2019-11-05 17:43:05Z] - INFO - Начало работы Transmiter SKAD Signature
+[2019-11-05 17:43:05Z] - INFO - Performing the operation "Copy File" on target "Item: D:\SKAD\transmiter\temp\GNI\SBC217102803_720320191101_288000021900000485_200.XML Destination: D:\SKAD\transmiter\temp\work\SBC217102803_720320191101_2880
+00021900000485_200.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiter\temp\GNI\SBC217102803_720320191101_288000021900000486_100.XML Destination: D:\SKAD\transmiter\temp\work\SBC217102803_720320191101_2880
+00021900000486_100.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiter\temp\GNI\SBC217102803_720320191101_288000021900000487_100.XML Destination: D:\SKAD\transmiter\temp\work\SBC217102803_720320191101_2880
+00021900000487_100.XML".
+
+[2019-11-05 17:43:05Z] - INFO - Сохраняем текущею ключевую дискету
+[2019-11-05 17:43:05Z] - INFO - Загружаем ключевую дискету d:\SKAD\Floppy\DISKET2019-skad-test\test1
+[2019-11-05 17:43:05Z] - INFO - Начинаем преобразование...
+[2019-11-05 17:43:05Z] - INFO - Обрабатываем файл SBC217102803_720320191101_288000021900000485_200.XML
+[2019-11-05 17:43:12Z] - INFO - Обрабатываем файл SBC217102803_720320191101_288000021900000486_100.XML
+[2019-11-05 17:43:13Z] - INFO - Обрабатываем файл SBC217102803_720320191101_288000021900000487_100.XML
+[2019-11-05 17:43:14Z] - INFO - Performing the operation "Remove File" on target "D:\SKAD\transmiter\temp\work\SBC217102803_720320191101_288000021900000485_200.XML".
+Performing the operation "Remove File" on target "D:\SKAD\transmiter\temp\work\SBC217102803_720320191101_288000021900000486_100.XML".
+Performing the operation "Remove File" on target "D:\SKAD\transmiter\temp\work\SBC217102803_720320191101_288000021900000487_100.XML".
+
+[2019-11-05 17:43:14Z] - INFO - Performing the operation "Rename File" on target "Item: D:\SKAD\transmiter\temp\work\SBC217102803_720320191101_288000021900000485_200.XML.test Destination: D:\SKAD\transmiter\temp\work\SBC217102803_720320191
+101_288000021900000485_200.XML.tst".
+Performing the operation "Rename File" on target "Item: D:\SKAD\transmiter\temp\work\SBC217102803_720320191101_288000021900000486_100.XML.test Destination: D:\SKAD\transmiter\temp\work\SBC217102803_720320191
+101_288000021900000486_100.XML.tst".
+Performing the operation "Rename File" on target "Item: D:\SKAD\transmiter\temp\work\SBC217102803_720320191101_288000021900000487_100.XML.test Destination: D:\SKAD\transmiter\temp\work\SBC217102803_720320191
+101_288000021900000487_100.XML.tst".
+
+[2019-11-05 17:43:14Z] - INFO - Начинаем архивацию AN028031911050001.arj ...
+[2019-11-05 17:43:15Z] - INFO - Performing the operation "Remove File" on target "D:\SKAD\transmiter\temp\work\SBC217102803_720320191101_288000021900000485_200.XML.tst".
+Performing the operation "Remove File" on target "D:\SKAD\transmiter\temp\work\SBC217102803_720320191101_288000021900000486_100.XML.tst".
+Performing the operation "Remove File" on target "D:\SKAD\transmiter\temp\work\SBC217102803_720320191101_288000021900000487_100.XML.tst".
+
+[2019-11-05 17:43:15Z] - INFO - Начинаем преобразование...
+[2019-11-05 17:43:15Z] - INFO - Обрабатываем файл AN028031911050001.arj
+[2019-11-05 17:43:16Z] - INFO - Performing the operation "Remove File" on target "D:\SKAD\transmiter\temp\work\AN028031911050001.arj".
+
+[2019-11-05 17:43:16Z] - INFO - Performing the operation "Rename File" on target "Item: D:\SKAD\transmiter\temp\work\AN028031911050001.arj.test Destination: D:\SKAD\transmiter\temp\work\AN028031911050001.arj.tst".
+
+[2019-11-05 17:43:16Z] - INFO - Копируем файл архива AN028031911050001.arj.tst в D:\SKAD\transmiter\temp\311jur\Arhive\05112019
+[2019-11-05 17:43:16Z] - INFO - Копируем файл архива AN028031911050001.arj.tst в D:\SKAD\transmiter\temp\Post
+[2019-11-05 17:43:16Z] - INFO - Performing the operation "Remove File" on target "D:\SKAD\transmiter\temp\work\AN028031911050001.arj.tst".
+
+[2019-11-05 17:43:16Z] - INFO - Отправка почтового сообщения
+[2019-11-05 17:43:26Z] - INFO - Отправлено 3 файлов
+[2019-11-05 17:43:26Z] - INFO - Загружаем исходную ключевую дискету
+[2019-11-05 17:43:26Z] - INFO - Конец работы скрипта!
