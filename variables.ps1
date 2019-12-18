@@ -2,20 +2,21 @@ $curDir = Split-Path -Path $myInvocation.MyCommand.Path -Parent
 
 [string]$util = "$curDir\util"
 [string]$tmp = "$curDir\temp"
+[boolean]$debug = $true
 
 #рабочий каталог, где будут подписываться и шифроваться файлы
 [string]$work = "$tmp\work"
 #маска поиска отчетов
 [string]$mask = "*.xml"
 
-#[string]$arj32 ="$curDir\util\arj32.exe"
-[string]$archiver = "$curDir\util\7z.exe"
-#[string]$extArchiver = "arj"
-[string]$extArchiver = "zip"
+[string]$arj32 ="$curDir\util\arj32.exe"
+[string]$archiver = "$curDir\util\gzip.exe"
+[string]$extArchiver = "arj"
+#[string]$extArchiver = "zip"
 
 [string]$spki = "C:\Program Files\MDPREI\spki\spki1utl.exe"
-[string]$vdkeys = "d:\SKAD\Floppy\DISKET2019-skad-test\test1"
-[string]$profile = "OT_TestFOIV"
+[string]$vdkeys = "d:\SKAD\Floppy\foiv"
+[string]$profile = "r2880_2"
 [string]$recList = "$curDir\util\Reclist.conf"
 
 #первоначальное копирование отчетности в папку work

@@ -6,7 +6,7 @@ $post_fix = @("RBS", "WAY4")
 . $curDir/lib/PSMultiLog.ps1
 
 Set-Location $curDir
-#ClearUI
+
 Clear-Host
 Start-HostLog -LogLevel Information
 Start-FileLog -LogLevel Information -FilePath $logName -Append
@@ -122,6 +122,3 @@ if ($countWay4 -eq 0){
         exit
     }
 }
-
-<#Stop-FileLog
-Stop-HostLog#>
