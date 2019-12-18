@@ -9,7 +9,6 @@ param (
 	#$nobegin - будем копировать сообщения автоматически в папку Work или это уже сделано вручную
 )
 
-[boolean]$debug = $false
 [string]$curDir = Split-Path -Path $myInvocation.MyCommand.Path -Parent
 Set-Location $curDir
 [string]$lib = "$curDir\lib"
@@ -19,7 +18,6 @@ Set-Location $curDir
 . $lib/libs.ps1
 . $lib/libsSKAD.ps1
 
-#ClearUI
 Clear-Host
 Start-HostLog -LogLevel Information
 Start-FileLog -LogLevel Information -FilePath $logName -Append
@@ -32,17 +30,17 @@ Write-Log -EntryType Information -Message "Начало работы Transmiter 
 
 #меню для ввода с клавиатуры
 if ($debug) {
-	<#Remove-Item -Path "$work\*.*"
+	Remove-Item -Path "$work\*.*"
 	Copy-Item -Path "$tmp\work1\RBS\*.*" -Destination "$311Dir\RBS"
 	Copy-Item -Path "$tmp\work1\WAY4\*.*" -Destination "$311Dir\WAY4"
 
 	$nobegin = $false
-	$form = '311p'#>
+	$form = '311p'
 
-	Remove-Item -Path "$work\*.*"
+	<#Remove-Item -Path "$work\*.*"
 	Copy-Item -Path "$tmp\work1\*.*" -Destination $gni
 	$nobegin = $false
-	$form = 'nalog'
+	$form = 'nalog'#>
 }
 elseif ($form -eq "none") {
 	$title = "Отправка отчетности"
@@ -154,8 +152,16 @@ $xmlFiles = Get-ChildItem -Path $work "*.xml"
 $countXML = ($xmlFiles | Measure-Object).count
 
 #подписываем и шифруем отчеты
+Write-Log -EntryType Information -Message "Подписываем файлы"
+SKAD_Encrypt -encrypt $false -maskFiles "*.xml"
+
+Write-Log -EntryType Information -Message "Архивируем файлы"
+SKAD_archive -maskFiles "*.xml"
+
+Write-Log -EntryType Information -Message "Шифруем файлы"
 SKAD_Encrypt -encrypt $true -maskFiles "*.xml"
 
+exit
 #сжимаем файлы и переносим в архив
 Set-Location $work
 [string]$maskArch = ''
