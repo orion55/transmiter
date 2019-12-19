@@ -4,6 +4,19 @@
 . $curDir/lib/libs.ps1
 . $curDir/lib/PSMultiLog.ps1
 
+function copyArchive {
+    try {
+        Write-Log -EntryType Information -Message "Резервное копирование файлов в $archiveDir"
+        $msg = Copy-Item "$work\*.xml" -Destination $archiveDir -ErrorAction Stop -Verbose -Force *>&1
+        Write-Log -EntryType Information -Message ($msg | Out-String)
+        Write-Log -EntryType Information -Message "Файл(ы) скопирован(ы) в $archiveDir"
+    }
+    catch {
+        Write-Log -EntryType Error -Message "Ошибка копирования файла(ов) в $archiveDir"
+        exit
+    }
+}
+
 Set-Location $curDir
 
 Start-HostLog -LogLevel Information
@@ -24,6 +37,7 @@ if ($countWork -eq 0) {
         try {
             $msg = Copy-Item -Path "$gni\*.xml" -Destination $work -Verbose -Force *>&1
             Write-Log -EntryType Information -Message ($msg | Out-String)
+            copyArchive
         }
         catch {
             Write-Log -EntryType Error -Message "Ошибка копирования файла(ов) в $work"
@@ -36,14 +50,5 @@ if ($countWork -eq 0) {
     }
 }
 else {
-    try {
-        Write-Log -EntryType Information -Message "Резервное копирование файлов в $archiveDir"
-        $msg = Copy-Item "$work\*.xml" -Destination $archiveDir -ErrorAction Stop -Verbose -Force *>&1
-        Write-Log -EntryType Information -Message ($msg | Out-String)
-        Write-Log -EntryType Information -Message "Файл(ы) скопирован(ы) в $archiveDir"
-    }
-    catch {
-        Write-Log -EntryType Error -Message "Ошибка копирования файла(ов) в $archiveDir"
-        exit
-    }
+    copyArchive
 }

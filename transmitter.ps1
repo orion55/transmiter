@@ -32,17 +32,17 @@ Set-Location $work
 
 #меню для ввода с клавиатуры
 if ($debug) {
-	Remove-Item -Path "$work\*.*"
+	<#Remove-Item -Path "$work\*.*"
 	Copy-Item -Path "$tmp\work1\RBS\*.*" -Destination "$311Dir\RBS"
 	Copy-Item -Path "$tmp\work1\WAY4\*.*" -Destination "$311Dir\WAY4"
 
 	$nobegin = $false
-	$form = '311p'
+	$form = '311p'#>
 
-	<#Remove-Item -Path "$work\*.*"
+	Remove-Item -Path "$work\*.*"
 	Copy-Item -Path "$tmp\work1\*.*" -Destination $gni
 	$nobegin = $false
-	$form = 'nalog'#>
+	$form = 'nalog'
 }
 elseif ($form -eq "none") {
 	$title = "Отправка отчетности"

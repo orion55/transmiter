@@ -29,11 +29,11 @@ foreach ($curPrefix in $post_fix){
 }
 
 $rbsArchiv = "$arch_dir\RBS"
-$subName = Get-ChildItem "BN*" -Path $rbsOrig -Name -Directory
+<#$subName = Get-ChildItem "BN*" -Path $rbsOrig -Name -Directory
 $countSub = ($subName | Measure-Object).count
 if ($countSub -ne 1){
     Write-Log -EntryType Error -Message "Количество вложенных папок в $rbsOrig не равно 1"
-}
+}#>
 
 Write-Log -EntryType Information -Message "Начало копирования файлов..."
 
