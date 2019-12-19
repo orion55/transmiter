@@ -28,6 +28,8 @@ testFiles(@($archiver, $spki, $recList, $311_cp, $311jur_cp))
 
 Write-Log -EntryType Information -Message "Начало работы Transmiter SKAD Signature"
 
+Set-Location $work
+
 #меню для ввода с клавиатуры
 if ($debug) {
 	Remove-Item -Path "$work\*.*"
@@ -161,9 +163,7 @@ SKAD_archive -maskFiles "*.xml"
 Write-Log -EntryType Information -Message "Шифруем файлы"
 SKAD_Encrypt -encrypt $true -maskFiles "*.xml"
 
-exit
 #сжимаем файлы и переносим в архив
-Set-Location $work
 [string]$maskArch = ''
 
 if ($form -eq '311p') {
@@ -175,12 +175,7 @@ elseif ($form -eq 'nalog') {
 
 $date1 = Get-Date -UFormat "%y%m%d"
 
-if ($debug) {
-	$afnFiles = Get-ChildItem "$arhivePath\$maskArch$date1*.$extArchiver.tst"
-}
-else {
-	$afnFiles = Get-ChildItem "$arhivePath\$maskArch$date1*.$extArchiver"
-}
+$afnFiles = Get-ChildItem "$arhivePath\$maskArch$date1*.$extArchiver"
 $afnCount = ($afnFiles | Measure-Object).count
 $afnCount++
 $afnCountStr = $afnCount.ToString("0000")
@@ -188,23 +183,9 @@ $afnCountStr = $afnCount.ToString("0000")
 $fname = $maskArch + $date1 + $afnCountStr + "." + $extArchiver
 
 Write-Log -EntryType Information -Message "Начинаем архивацию $fname ..."
-if ($debug) {
-	if ($extArchiver -eq 'arj') {
-		$AllArgs = @('a', '-e', "$work\$fname", "$work\*.xml.tst")
-	}
-	if ($extArchiver -eq 'zip') {
-		$AllArgs = @('a', '-tzip', '-ssw', "$work\$fname", "$work\*.xml.tst")
-	}
-}
-else {
-	if ($extArchiver -eq 'arj') {
-		$AllArgs = @('a', '-e', "$work\$fname", "$work\*.xml")
-	}
-	if ($extArchiver -eq 'zip') {
-		$AllArgs = @('a', '-tzip', '-ssw', "$work\$fname", "$work\*.xml")
-	}
-}
-&$archiver	$AllArgs | Out-Null
+
+$AllArgs = @('a', '-e', "$work\$fname", "$work\*.xml")
+&$arj32	$AllArgs | Out-Null
 
 Set-Location $curDir
 
@@ -213,10 +194,6 @@ $msg = Remove-Item "$work\*.*" -Exclude $fname -Verbose *>&1
 Write-Log -EntryType Information -Message ($msg | Out-String)
 
 SKAD_Encrypt -encrypt $false -maskFiles "*.$extArchiver"
-
-if ($debug) {
-	$fname = $fname + ".tst"
-}
 
 Write-Log -EntryType Information -Message "Копируем файл архива $fname в $arhivePath"
 Copy-Item "$work\$fname" -Destination $arhivePath -Force
@@ -229,7 +206,7 @@ Write-Log -EntryType Information -Message ($msg | Out-String)
 $body = "Отправлено $countXML файлов"
 Write-Log -EntryType Information -Message "Отправка почтового сообщения"
 if (Test-Connection $mail_server -Quiet -Count 2) {
-	$title = "Отправка в $curDate ИФНС - SKAD Signatura"
+	$title = "Отправка в $curDate ИФНС - SKAD"
 	$encoding = [System.Text.Encoding]::UTF8
 	Send-MailMessage -To $mail_addr -Body $body -Encoding $encoding -From $mail_from -Subject $title -SmtpServer $mail_server
 }

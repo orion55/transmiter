@@ -1,0 +1,130 @@
+Текущее время: Thu Dec 19 10:37:51 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021900091323_700.XML -out D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021900091323_700.XML.test -reclist D:\SKAD\transmiterSKAD\util\Reclist.conf -silent D:\SKAD\transmiterSKAD\log\19122019_spki_tr.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Thu Dec 19 10:37:52 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021900091325_700.XML -out D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021900091325_700.XML.test -reclist D:\SKAD\transmiterSKAD\util\Reclist.conf -silent D:\SKAD\transmiterSKAD\log\19122019_spki_tr.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Thu Dec 19 10:37:53 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021901062807_700.xml -out D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021901062807_700.xml.test -reclist D:\SKAD\transmiterSKAD\util\Reclist.conf -silent D:\SKAD\transmiterSKAD\log\19122019_spki_tr.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Thu Dec 19 10:37:54 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021901062811_700.xml -out D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021901062811_700.xml.test -reclist D:\SKAD\transmiterSKAD\util\Reclist.conf -silent D:\SKAD\transmiterSKAD\log\19122019_spki_tr.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Thu Dec 19 10:37:56 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -in D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021900091323_700.XML -out D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021900091323_700.XML.test -reclist D:\SKAD\transmiterSKAD\util\Reclist.conf -silent D:\SKAD\transmiterSKAD\log\19122019_spki_tr.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
+Текущее время: Thu Dec 19 10:37:57 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -in D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021900091325_700.XML -out D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021900091325_700.XML.test -reclist D:\SKAD\transmiterSKAD\util\Reclist.conf -silent D:\SKAD\transmiterSKAD\log\19122019_spki_tr.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
+Текущее время: Thu Dec 19 10:37:58 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -in D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021901062807_700.xml -out D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021901062807_700.xml.test -reclist D:\SKAD\transmiterSKAD\util\Reclist.conf -silent D:\SKAD\transmiterSKAD\log\19122019_spki_tr.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
+Текущее время: Thu Dec 19 10:37:59 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -in D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021901062811_700.xml -out D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021901062811_700.xml.test -reclist D:\SKAD\transmiterSKAD\util\Reclist.conf -silent D:\SKAD\transmiterSKAD\log\19122019_spki_tr.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
+Текущее время: Thu Dec 19 10:53:27 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021900091323_700.XML -out D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021900091323_700.XML.test -reclist D:\SKAD\transmiterSKAD\util\Reclist.conf -silent D:\SKAD\transmiterSKAD\log\19122019_spki_tr.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Thu Dec 19 10:53:28 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021900091325_700.XML -out D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021900091325_700.XML.test -reclist D:\SKAD\transmiterSKAD\util\Reclist.conf -silent D:\SKAD\transmiterSKAD\log\19122019_spki_tr.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Thu Dec 19 10:53:29 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021901062807_700.xml -out D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021901062807_700.xml.test -reclist D:\SKAD\transmiterSKAD\util\Reclist.conf -silent D:\SKAD\transmiterSKAD\log\19122019_spki_tr.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Thu Dec 19 10:53:30 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021901062811_700.xml -out D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021901062811_700.xml.test -reclist D:\SKAD\transmiterSKAD\util\Reclist.conf -silent D:\SKAD\transmiterSKAD\log\19122019_spki_tr.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Thu Dec 19 10:53:32 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -in D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021900091323_700.XML -out D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021900091323_700.XML.test -reclist D:\SKAD\transmiterSKAD\util\Reclist.conf -silent D:\SKAD\transmiterSKAD\log\19122019_spki_tr.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
+Текущее время: Thu Dec 19 10:53:33 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -in D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021900091325_700.XML -out D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021900091325_700.XML.test -reclist D:\SKAD\transmiterSKAD\util\Reclist.conf -silent D:\SKAD\transmiterSKAD\log\19122019_spki_tr.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
+Текущее время: Thu Dec 19 10:53:34 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -in D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021901062807_700.xml -out D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021901062807_700.xml.test -reclist D:\SKAD\transmiterSKAD\util\Reclist.conf -silent D:\SKAD\transmiterSKAD\log\19122019_spki_tr.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
+Текущее время: Thu Dec 19 10:53:35 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -in D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021901062811_700.xml -out D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021901062811_700.xml.test -reclist D:\SKAD\transmiterSKAD\util\Reclist.conf -silent D:\SKAD\transmiterSKAD\log\19122019_spki_tr.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
+Текущее время: Thu Dec 19 10:53:37 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data D:\SKAD\transmiterSKAD\temp\work\BN028031912190001.arj -out D:\SKAD\transmiterSKAD\temp\work\BN028031912190001.arj.test -reclist D:\SKAD\transmiterSKAD\util\Reclist.conf -silent D:\SKAD\transmiterSKAD\log\19122019_spki_tr.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Thu Dec 19 10:56:39 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021900091323_700.XML -out D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021900091323_700.XML.test -reclist D:\SKAD\transmiterSKAD\util\Reclist.conf -silent D:\SKAD\transmiterSKAD\log\19122019_spki_tr.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Thu Dec 19 10:56:40 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021900091325_700.XML -out D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021900091325_700.XML.test -reclist D:\SKAD\transmiterSKAD\util\Reclist.conf -silent D:\SKAD\transmiterSKAD\log\19122019_spki_tr.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Thu Dec 19 10:56:42 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021901062807_700.xml -out D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021901062807_700.xml.test -reclist D:\SKAD\transmiterSKAD\util\Reclist.conf -silent D:\SKAD\transmiterSKAD\log\19122019_spki_tr.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Thu Dec 19 10:56:43 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021901062811_700.xml -out D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021901062811_700.xml.test -reclist D:\SKAD\transmiterSKAD\util\Reclist.conf -silent D:\SKAD\transmiterSKAD\log\19122019_spki_tr.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
+Текущее время: Thu Dec 19 10:56:45 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -in D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021900091323_700.XML -out D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021900091323_700.XML.test -reclist D:\SKAD\transmiterSKAD\util\Reclist.conf -silent D:\SKAD\transmiterSKAD\log\19122019_spki_tr.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
+Текущее время: Thu Dec 19 10:56:46 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -in D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021900091325_700.XML -out D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021900091325_700.XML.test -reclist D:\SKAD\transmiterSKAD\util\Reclist.conf -silent D:\SKAD\transmiterSKAD\log\19122019_spki_tr.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
+Текущее время: Thu Dec 19 10:56:47 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -in D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021901062807_700.xml -out D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021901062807_700.xml.test -reclist D:\SKAD\transmiterSKAD\util\Reclist.conf -silent D:\SKAD\transmiterSKAD\log\19122019_spki_tr.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
+Текущее время: Thu Dec 19 10:56:48 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -encrypt -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -in D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021901062811_700.xml -out D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191218_288000021901062811_700.xml.test -reclist D:\SKAD\transmiterSKAD\util\Reclist.conf -silent D:\SKAD\transmiterSKAD\log\19122019_spki_tr.log 
+Инициализация
+Установка ЭП и шифрование файла
+Результат: OK (00000000)
+Текущее время: Thu Dec 19 10:56:49 2019
+"C:\Program Files\MDPREI\spki\spki1utl.exe" -sign -profile r2880_2 -registry -algorithm 1.2.643.7.1.1.2.2 -data D:\SKAD\transmiterSKAD\temp\work\BN028031912190001.arj -out D:\SKAD\transmiterSKAD\temp\work\BN028031912190001.arj.test -reclist D:\SKAD\transmiterSKAD\util\Reclist.conf -silent D:\SKAD\transmiterSKAD\log\19122019_spki_tr.log 
+Инициализация
+Установка ЭП файла
+Результат: OK (00000000)
