@@ -94,7 +94,7 @@ function SKAD_archive {
 
     $gzFiles = Get-ChildItem "$work\*.gz"
     if (($gzFiles | Measure-Object).count -gt 0) {
-        $msg = "$work\$mask" | Remove-Item -Verbose -Force *>&1
+        $msg = "$work\$maskFiles" | Remove-Item -Verbose -Force -Exclude "$work\*.gz" *>&1
         Write-Log -EntryType Information -Message ($msg | Out-String)
         $msg = Get-ChildItem -path $work '*.gz' | Rename-Item -NewName { $_.Name -replace '.gz$', '' } -Verbose *>&1
         Write-Log -EntryType Information -Message ($msg | Out-String)
