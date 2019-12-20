@@ -5,17 +5,17 @@ $curDir = Split-Path -Path $myInvocation.MyCommand.Path -Parent
 [boolean]$debug = $false
 
 #рабочий каталог, где будут подписываться и шифроваться файлы
-[string]$work = "c:\WORK"
+[string]$work = "$tmp\work"
 #маска поиска отчетов
 [string]$mask = "*.xml"
 
-#[string]$arj32 ="$curDir\util\arj32.exe"
-[string]$archiver = "$curDir\util\7z.exe"
-#[string]$extArchiver = "arj"
-[string]$extArchiver = "zip"
+[string]$arj32 ="$curDir\util\arj32.exe"
+[string]$archiver = "$curDir\util\gzip.exe"
+[string]$extArchiver = "arj"
+#[string]$extArchiver = "zip"
 
 [string]$spki = "C:\Program Files\MDPREI\spki\spki1utl.exe"
-[string]$vdkeys = "C:\DISKET2019-skad-2\foiv"
+[string]$vdkeys = "d:\SKAD\Floppy\foiv"
 [string]$profile = "r2880_2"
 [string]$recList = "$curDir\util\Reclist.conf"
 
@@ -26,11 +26,11 @@ $curDir = Split-Path -Path $myInvocation.MyCommand.Path -Parent
 [string]$311jur_cp = "$lib\311jur_cp.ps1"
 
 #каталог на московском сервере, с отчетами для налоговой
-[string]$gni = "\\191.168.6.12\quorum\tmn\SENDDOC\365P\CB_OUT\GNI"
+[string]$gni = "$tmp\GNI"
 
-$311Dir = "\\191.168.7.14\RBS\TMN\311p"
-$311Archive = "\\tmn-ts-01\311p\Arhive"
-$311JurArchive = "\\tmn-ts-01\311jur\Archive"
+$311Dir = "$tmp\311pMsk"
+$311Archive = "$tmp\311p\Arhive"
+$311JurArchive = "$tmp\311jur\Arhive"
 
 $curDate = Get-Date -Format "ddMMyyyy"
 [string]$logName = $curDir + "\log\" + $curDate + "_trans.log"
@@ -38,6 +38,7 @@ $curDate = Get-Date -Format "ddMMyyyy"
 [string]$outcoming_post = "$tmp\Post"
 
 #настройка почты
-[string]$mail_addr = "tmn-f365@tmn.apkbank.apk"
+#[string]$mail_addr = "tmn-f365@tmn.apkbank.apk"
+[string]$mail_addr = "tmn-goe@tmn.apkbank.ru"
 [string]$mail_server = "191.168.6.50"
 [string]$mail_from = "robot311@tmn.apkbank.apk"
