@@ -205,13 +205,19 @@ Write-Log -EntryType Information -Message ($msg | Out-String)
 
 $body = "Отправлено $countXML файлов"
 Write-Log -EntryType Information -Message "Отправка почтового сообщения"
-if (Test-Connection $mail_server -Quiet -Count 2) {
+if (Test-Connection $mailServer -Quiet -Count 2) {
+	if ($form -eq '311p') {
+		$mailAddr = $mailAddrFiz
+	}
+	elseif ($form -eq 'nalog') {
+		$mailAddr = $mailAddrJur
+	}
 	$title = "Отправка в $curDate ИФНС - SKAD"
 	$encoding = [System.Text.Encoding]::UTF8
-	Send-MailMessage -To $mail_addr -Body $body -Encoding $encoding -From $mail_from -Subject $title -SmtpServer $mail_server
+	Send-MailMessage -To $mailAddr -Body $body -Encoding $encoding -From $mailFrom -Subject $title -SmtpServer $mailServer
 }
 else {
-	Write-Log -EntryType Error -Message "Не удалось соединиться с почтовым сервером $mail_server"
+	Write-Log -EntryType Error -Message "Не удалось соединиться с почтовым сервером $mailServer"
 }
 Write-Log -EntryType Information -Message $body
 

@@ -39,6 +39,8 @@ $curDate = Get-Date -Format "ddMMyyyy"
 
 #настройка почты
 #[string]$mail_addr = "tmn-f365@tmn.apkbank.apk"
-[string]$mail_addr = "tmn-goe@tmn.apkbank.ru"
-[string]$mail_server = "191.168.6.50"
-[string]$mail_from = "robot311@tmn.apkbank.apk"
+[string]$mailAddrFiz = "tmn-goe@tmn.apkbank.ru"
+#[string[]]$mailAddrJur = "<tmn-lov@tmn.apkbank.ru>", "<tmn_oit@tmn.apkbank.apk>"
+$mailAddrJur = "tmn-goe <tmn-goe@tmn.apkbank.ru>", "lma <lma@tmn.apkbank.ru>"
+[string]$mailServer = "191.168.6.50"
+[string]$mailFrom = "robot311@tmn.apkbank.apk"
