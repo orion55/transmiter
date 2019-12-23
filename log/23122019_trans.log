@@ -1,0 +1,191 @@
+﻿[2019-12-23 11:57:26Z] - INFO - Начало копирования файлов...
+[2019-12-23 11:57:26Z] - INFO - Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC017102803_720320191223_288000021900091480_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\311p\Arhive\23122019\RBS\SFC017102803_720320191223_288000021900091480_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC017102803_720320191223_288000021900091481_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\311p\Arhive\23122019\RBS\SFC017102803_720320191223_288000021900091481_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC017102803_720320191223_288000021900091482_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\311p\Arhive\23122019\RBS\SFC017102803_720320191223_288000021900091482_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091484_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\311p\Arhive\23122019\RBS\SFC217102803_720320191223_288000021900091484_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091485_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\311p\Arhive\23122019\RBS\SFC217102803_720320191223_288000021900091485_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091486_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\311p\Arhive\23122019\RBS\SFC217102803_720320191223_288000021900091486_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091487_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\311p\Arhive\23122019\RBS\SFC217102803_720320191223_288000021900091487_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091488_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\311p\Arhive\23122019\RBS\SFC217102803_720320191223_288000021900091488_700.XML".
+
+[2019-12-23 11:57:26Z] - INFO - Файл(ы) скопирован(ы) в D:\SKAD\transmiterSKAD\temp\311p\Arhive\23122019\RBS
+[2019-12-23 11:57:26Z] - INFO - Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC017102803_720320191223_288000021900091480_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\work\SFC017102803_720320191223_288000021900091480_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC017102803_720320191223_288000021900091481_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\work\SFC017102803_720320191223_288000021900091481_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC017102803_720320191223_288000021900091482_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\work\SFC017102803_720320191223_288000021900091482_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091484_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\work\SFC217102803_720320191223_288000021900091484_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091485_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\work\SFC217102803_720320191223_288000021900091485_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091486_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\work\SFC217102803_720320191223_288000021900091486_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091487_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\work\SFC217102803_720320191223_288000021900091487_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091488_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\work\SFC217102803_720320191223_288000021900091488_700.XML".
+
+[2019-12-23 11:57:26Z] - INFO - Файл(ы) скопирован(ы) в D:\SKAD\transmiterSKAD\temp\work
+[2019-12-23 11:57:26Z] - INFO - Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC017102803_720320191223_288000021900091480_700.XML".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC017102803_720320191223_288000021900091481_700.XML".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC017102803_720320191223_288000021900091482_700.XML".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091484_700.XML".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091485_700.XML".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091486_700.XML".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091487_700.XML".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091488_700.XML".
+
+[2019-12-23 11:57:26Z] - INFO - Файл(ы) удален(ы) в D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001
+[2019-12-23 11:57:26Z] - INFO - Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\fns.log Destination: D:\SKAD\transmiterSKAD\temp\311p\Arhive\23122019\WAY4\fns.log".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC017102803_720320191218_288000021901062807_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\311p\Arhive\23122019\WAY4\SFC017102803_720320191218_288000021901062807_700.xml".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC017102803_720320191218_288000021901062811_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\311p\Arhive\23122019\WAY4\SFC017102803_720320191218_288000021901062811_700.xml".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC017102803_720320191218_288000021901062812_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\311p\Arhive\23122019\WAY4\SFC017102803_720320191218_288000021901062812_700.xml".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC017102803_720320191218_288000021901062815_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\311p\Arhive\23122019\WAY4\SFC017102803_720320191218_288000021901062815_700.xml".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC117102803_720320191218_288000021901062819_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\311p\Arhive\23122019\WAY4\SFC117102803_720320191218_288000021901062819_700.xml".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC117102803_720320191218_288000021901062823_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\311p\Arhive\23122019\WAY4\SFC117102803_720320191218_288000021901062823_700.xml".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC117102803_720320191218_288000021901062826_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\311p\Arhive\23122019\WAY4\SFC117102803_720320191218_288000021901062826_700.xml".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC117102803_720320191218_288000021901062828_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\311p\Arhive\23122019\WAY4\SFC117102803_720320191218_288000021901062828_700.xml".
+
+[2019-12-23 11:57:26Z] - INFO - Файл(ы) скопирован(ы) в D:\SKAD\transmiterSKAD\temp\311p\Arhive\23122019\WAY4
+[2019-12-23 11:57:26Z] - INFO - Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC017102803_720320191218_288000021901062807_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\work\SFC017102803_720320191218_288000021901062807_700.xml".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC017102803_720320191218_288000021901062811_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\work\SFC017102803_720320191218_288000021901062811_700.xml".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC017102803_720320191218_288000021901062812_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\work\SFC017102803_720320191218_288000021901062812_700.xml".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC017102803_720320191218_288000021901062815_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\work\SFC017102803_720320191218_288000021901062815_700.xml".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC117102803_720320191218_288000021901062819_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\work\SFC117102803_720320191218_288000021901062819_700.xml".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC117102803_720320191218_288000021901062823_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\work\SFC117102803_720320191218_288000021901062823_700.xml".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC117102803_720320191218_288000021901062826_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\work\SFC117102803_720320191218_288000021901062826_700.xml".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC117102803_720320191218_288000021901062828_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\work\SFC117102803_720320191218_288000021901062828_700.xml".
+
+[2019-12-23 11:57:26Z] - INFO - Файл(ы) скопирован(ы) в D:\SKAD\transmiterSKAD\temp\work
+[2019-12-23 11:57:26Z] - INFO - Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\fns.log".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC017102803_720320191218_288000021901062807_700.xml".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC017102803_720320191218_288000021901062811_700.xml".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC017102803_720320191218_288000021901062812_700.xml".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC017102803_720320191218_288000021901062815_700.xml".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC117102803_720320191218_288000021901062819_700.xml".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC117102803_720320191218_288000021901062823_700.xml".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC117102803_720320191218_288000021901062826_700.xml".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC117102803_720320191218_288000021901062828_700.xml".
+
+[2019-12-23 11:57:26Z] - INFO - Файл(ы) удален(ы) в D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4
+[2019-12-23 11:59:39Z] - INFO - Начало копирования файлов...
+[2019-12-23 11:59:39Z] - INFO - Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC017102803_720320191223_288000021900091480_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\311p\Arhive\23122019\RBS\SFC017102803_720320191223_288000021900091480_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC017102803_720320191223_288000021900091481_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\311p\Arhive\23122019\RBS\SFC017102803_720320191223_288000021900091481_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC017102803_720320191223_288000021900091482_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\311p\Arhive\23122019\RBS\SFC017102803_720320191223_288000021900091482_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091484_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\311p\Arhive\23122019\RBS\SFC217102803_720320191223_288000021900091484_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091485_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\311p\Arhive\23122019\RBS\SFC217102803_720320191223_288000021900091485_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091486_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\311p\Arhive\23122019\RBS\SFC217102803_720320191223_288000021900091486_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091487_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\311p\Arhive\23122019\RBS\SFC217102803_720320191223_288000021900091487_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091488_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\311p\Arhive\23122019\RBS\SFC217102803_720320191223_288000021900091488_700.XML".
+
+[2019-12-23 11:59:39Z] - INFO - Файл(ы) скопирован(ы) в D:\SKAD\transmiterSKAD\temp\311p\Arhive\23122019\RBS
+[2019-12-23 11:59:39Z] - INFO - Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC017102803_720320191223_288000021900091480_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\work\SFC017102803_720320191223_288000021900091480_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC017102803_720320191223_288000021900091481_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\work\SFC017102803_720320191223_288000021900091481_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC017102803_720320191223_288000021900091482_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\work\SFC017102803_720320191223_288000021900091482_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091484_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\work\SFC217102803_720320191223_288000021900091484_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091485_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\work\SFC217102803_720320191223_288000021900091485_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091486_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\work\SFC217102803_720320191223_288000021900091486_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091487_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\work\SFC217102803_720320191223_288000021900091487_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091488_700.XML Destination: D:\
+SKAD\transmiterSKAD\temp\work\SFC217102803_720320191223_288000021900091488_700.XML".
+
+[2019-12-23 11:59:39Z] - INFO - Файл(ы) скопирован(ы) в D:\SKAD\transmiterSKAD\temp\work
+[2019-12-23 11:59:39Z] - INFO - Performing the operation "Remove Directory" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC017102803_720320191223_288000021900091480_700.XML".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC017102803_720320191223_288000021900091481_700.XML".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC017102803_720320191223_288000021900091482_700.XML".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091484_700.XML".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091485_700.XML".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091486_700.XML".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091487_700.XML".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001\SFC217102803_720320191223_288000021900091488_700.XML".
+
+[2019-12-23 11:59:40Z] - INFO - Файл(ы) удален(ы) в D:\SKAD\transmiterSKAD\temp\311pMsk\RBS\BN028031912230001
+[2019-12-23 11:59:40Z] - INFO - Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\fns.log Destination: D:\SKAD\transmiterSKAD\temp\311p\Arhive\23122019\WAY4\fns.log".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC017102803_720320191218_288000021901062807_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\311p\Arhive\23122019\WAY4\SFC017102803_720320191218_288000021901062807_700.xml".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC017102803_720320191218_288000021901062811_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\311p\Arhive\23122019\WAY4\SFC017102803_720320191218_288000021901062811_700.xml".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC017102803_720320191218_288000021901062812_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\311p\Arhive\23122019\WAY4\SFC017102803_720320191218_288000021901062812_700.xml".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC017102803_720320191218_288000021901062815_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\311p\Arhive\23122019\WAY4\SFC017102803_720320191218_288000021901062815_700.xml".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC117102803_720320191218_288000021901062819_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\311p\Arhive\23122019\WAY4\SFC117102803_720320191218_288000021901062819_700.xml".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC117102803_720320191218_288000021901062823_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\311p\Arhive\23122019\WAY4\SFC117102803_720320191218_288000021901062823_700.xml".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC117102803_720320191218_288000021901062826_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\311p\Arhive\23122019\WAY4\SFC117102803_720320191218_288000021901062826_700.xml".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC117102803_720320191218_288000021901062828_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\311p\Arhive\23122019\WAY4\SFC117102803_720320191218_288000021901062828_700.xml".
+
+[2019-12-23 11:59:40Z] - INFO - Файл(ы) скопирован(ы) в D:\SKAD\transmiterSKAD\temp\311p\Arhive\23122019\WAY4
+[2019-12-23 11:59:40Z] - INFO - Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC017102803_720320191218_288000021901062807_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\work\SFC017102803_720320191218_288000021901062807_700.xml".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC017102803_720320191218_288000021901062811_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\work\SFC017102803_720320191218_288000021901062811_700.xml".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC017102803_720320191218_288000021901062812_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\work\SFC017102803_720320191218_288000021901062812_700.xml".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC017102803_720320191218_288000021901062815_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\work\SFC017102803_720320191218_288000021901062815_700.xml".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC117102803_720320191218_288000021901062819_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\work\SFC117102803_720320191218_288000021901062819_700.xml".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC117102803_720320191218_288000021901062823_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\work\SFC117102803_720320191218_288000021901062823_700.xml".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC117102803_720320191218_288000021901062826_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\work\SFC117102803_720320191218_288000021901062826_700.xml".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC117102803_720320191218_288000021901062828_700.xml Destination: D:\SKAD\transmiterSK
+AD\temp\work\SFC117102803_720320191218_288000021901062828_700.xml".
+
+[2019-12-23 11:59:40Z] - INFO - Файл(ы) скопирован(ы) в D:\SKAD\transmiterSKAD\temp\work
+[2019-12-23 11:59:40Z] - INFO - Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\fns.log".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC017102803_720320191218_288000021901062807_700.xml".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC017102803_720320191218_288000021901062811_700.xml".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC017102803_720320191218_288000021901062812_700.xml".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC017102803_720320191218_288000021901062815_700.xml".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC117102803_720320191218_288000021901062819_700.xml".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC117102803_720320191218_288000021901062823_700.xml".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC117102803_720320191218_288000021901062826_700.xml".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4\SFC117102803_720320191218_288000021901062828_700.xml".
+
+[2019-12-23 11:59:40Z] - INFO - Файл(ы) удален(ы) в D:\SKAD\transmiterSKAD\temp\311pMsk\WAY4
