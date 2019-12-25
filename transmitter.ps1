@@ -24,7 +24,7 @@ Start-FileLog -LogLevel Information -FilePath $logName -Append
 
 #проверяем существуют ли нужные пути и файлы
 testDir(@($work, $gni, $util, $vdkeys, $311Dir, $311Archive))
-testFiles(@($archiver, $spki, $recList, $311_cp, $311jur_cp))
+testFiles(@($archiver, $spki, $fnsList, $fnsFssList, $311_cp, $311jur_cp))
 
 Write-Log -EntryType Information -Message "Начало работы Transmiter SKAD Signature"
 
@@ -32,17 +32,19 @@ Set-Location $work
 
 #меню для ввода с клавиатуры
 if ($debug) {
-	<#Remove-Item -Path "$work\*.*"
-	Copy-Item -Path "$tmp\work1\RBS\*.*" -Destination "$311Dir\RBS"
-	Copy-Item -Path "$tmp\work1\WAY4\*.*" -Destination "$311Dir\WAY4"
+	Remove-Item -Path "$work\*.*"
+	Remove-Item -Path $311Dir -Recurse
+	New-Item -ItemType directory -Path $311Dir | out-Null
+	Copy-Item -Path "$tmp\work1\RBS" -Destination $311Dir -Recurse
+	Copy-Item -Path "$tmp\work1\WAY4" -Destination $311Dir -Recurse
 
 	$nobegin = $false
-	$form = '311p'#>
+	$form = '311p'
 
-	Remove-Item -Path "$work\*.*"
+	<#Remove-Item -Path "$work\*.*"
 	Copy-Item -Path "$tmp\work1\*.*" -Destination $gni
 	$nobegin = $false
-	$form = 'nalog'
+	$form = 'nalog'#>
 }
 elseif ($form -eq "none") {
 	$title = "Отправка отчетности"
@@ -161,7 +163,14 @@ Write-Log -EntryType Information -Message "Архивируем файлы"
 SKAD_archive -maskFiles "*.xml"
 
 Write-Log -EntryType Information -Message "Шифруем файлы"
-SKAD_Encrypt -encrypt $true -maskFiles "*.xml"
+if ($form -eq '311p') {
+	$archDir = $311Archive
+	SKAD_Encrypt -encrypt $true -maskFiles "*.xml" -fss $false
+}
+elseif ($form -eq 'nalog') {
+	$archDir = $311JurArchive
+	SKAD_Encrypt -encrypt $true -maskFiles "*.xml" -fss $true
+}
 
 #сжимаем файлы и переносим в архив
 [string]$maskArch = ''

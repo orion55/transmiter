@@ -2,7 +2,7 @@ $curDir = Split-Path -Path $myInvocation.MyCommand.Path -Parent
 
 [string]$util = "$curDir\util"
 [string]$tmp = "$curDir\temp"
-[boolean]$debug = $false
+[boolean]$debug = $true
 
 #рабочий каталог, где будут подписываться и шифроваться файлы
 [string]$work = "$tmp\work"
@@ -17,7 +17,8 @@ $curDir = Split-Path -Path $myInvocation.MyCommand.Path -Parent
 [string]$spki = "C:\Program Files\MDPREI\spki\spki1utl.exe"
 [string]$vdkeys = "d:\SKAD\Floppy\foiv"
 [string]$profile = "r2880_2"
-[string]$recList = "$curDir\util\Reclist.conf"
+[string]$fnsList = "$curDir\util\FNS_Key.conf"
+[string]$fnsFssList = "$curDir\util\FNS_FSS_Key.conf"
 
 #первоначальное копирование отчетности в папку work
 [string]$311_cp = "$lib\311_cp.ps1"

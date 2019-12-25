@@ -17,25 +17,39 @@ function Copy_dirs {
 function SKAD_Encrypt {
     Param(
         $encrypt = $false,
-        [string]$maskFiles = "*.*")
+        [string]$maskFiles = "*.*",
+        $fss = $false
+    )
 
 
     $mask = Get-ChildItem -path $work $maskFiles
+
+    Set-Location "$curDir\util"
 
     foreach ($file in $mask) {
         $tmpFile = $file.FullName + '.test'
 
         $arguments = ''
         if ($encrypt) {
-            $arguments = "-sign -encrypt -profile $profile -registry -algorithm 1.2.643.7.1.1.2.2 -in $($file.FullName) -out $tmpFile -reclist $recList -silent $logSpki"
+            if ($fss) {
+                #$arguments = "-sign -encrypt -profile $profile -registry -algorithm 1.2.643.7.1.1.2.2 -in $($file.FullName) -out $tmpFile -reclist $recList -silent $logSpki"
+                $arguments = "-sign -encrypt -profile $profile -algorithm 1.2.643.7.1.1.2.2 -in $($file.FullName) -out $tmpFile -reclist $fnsFssList -silent $logSpki"
+            }
+            else {
+                $arguments = "-sign -encrypt -profile $profile -algorithm 1.2.643.7.1.1.2.2 -in $($file.FullName) -out $tmpFile -reclist $fnsList -silent $logSpki"
+            }
         }
         else {
-            $arguments = "-sign -profile $profile -registry -algorithm 1.2.643.7.1.1.2.2 -data $($file.FullName) -out $tmpFile -reclist $recList -silent $logSpki"
+            #$arguments = "-sign -profile $profile -registry -algorithm 1.2.643.7.1.1.2.2 -data $($file.FullName) -out $tmpFile -reclist $recList -silent $logSpki"
+            $arguments = "-sign -profile $profile -algorithm 1.2.643.7.1.1.2.2 -data $($file.FullName) -out $tmpFile -silent $logSpki"
+            #$arguments = "-sign -algorithm 1.2.643.7.1.1.2.2 -data $($file.FullName) -out $tmpFile"
         }
 
         Write-Log -EntryType Information -Message "Обрабатываем файл $($file.Name)"
         Start-Process $spki $arguments -NoNewWindow -Wait
     }
+
+    Set-Location $curDir
 
     $testFiles = Get-ChildItem "$work\*.test"
     if (($testFiles | Measure-Object).count -gt 0) {
@@ -62,10 +76,10 @@ function SKAD_Decrypt {
 
         $arguments = ''
         if ($decrypt) {
-            $arguments = "-decrypt -verify -delete -1 -profile $profile -registry -in $($file.FullName) -out $tmpFile -silent $logSpki"
+            $arguments = "-decrypt -verify -delete -1 -profile $profile -in $($file.FullName) -out $tmpFile -silent $logSpki"
         }
         else {
-            $arguments = "-verify -delete -1 -profile $profile -registry -in $($file.FullName) -out $tmpFile -silent $logSpki"
+            $arguments = "-verify -delete -1 -profile $profile -in $($file.FullName) -out $tmpFile -silent $logSpki"
         }
 
         Write-Log -EntryType Information -Message "Обрабатываем файл $($file.Name)"
