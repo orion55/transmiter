@@ -2,7 +2,7 @@ $curDir = Split-Path -Path $myInvocation.MyCommand.Path -Parent
 
 [string]$util = "$curDir\util"
 [string]$tmp = "$curDir\temp"
-[boolean]$debug = $true
+[boolean]$debug = $false
 
 #рабочий каталог, где будут подписываться и шифроваться файлы
 [string]$work = "$tmp\work"

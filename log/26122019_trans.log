@@ -1,0 +1,115 @@
+﻿[2019-12-26 13:47:57Z] - INFO - Начало работы Transmiter SKAD Signature
+[2019-12-26 13:48:02Z] - INFO - Обработка отчетности - 311p
+[2019-12-26 13:48:06Z] - INFO - Автоматическое копирование в папку D:\SKAD\transmiterSKAD\temp\work произведено не было!
+[2019-12-26 13:48:06Z] - ERRR - Диск А не найден!
+[2019-12-26 13:57:12Z] - INFO - Начало работы Transmiter SKAD Signature
+[2019-12-26 13:57:19Z] - INFO - Обработка отчетности - 311p
+[2019-12-26 13:57:22Z] - INFO - Автоматическое копирование в папку D:\SKAD\transmiterSKAD\temp\work произведено не было!
+[2019-12-26 13:57:22Z] - INFO - Сохраняем текущею ключевую дискету
+[2019-12-26 13:57:22Z] - INFO - Загружаем ключевую дискету d:\SKAD\Floppy\foiv
+[2019-12-26 13:57:22Z] - INFO - Подписываем файлы
+[2019-12-26 13:57:22Z] - INFO - Подписываем файлы
+[2019-12-26 13:57:22Z] - INFO - Обрабатываем файл SFC017102803_720320191223_288000021900091480_700.XML
+[2019-12-26 13:57:23Z] - INFO - Подписываем файлы
+[2019-12-26 13:57:23Z] - INFO - Обрабатываем файл SFC017102803_720320191223_288000021900091481_700.XML
+[2019-12-26 13:57:24Z] - ERRR - Ошибка при работе программы C:\Program Files\MDPREI\spki\spki1utl.exe
+[2019-12-26 13:57:53Z] - INFO - Начало работы Transmiter SKAD Signature
+[2019-12-26 13:58:17Z] - INFO - Начало работы Transmiter SKAD Signature
+[2019-12-26 13:58:39Z] - INFO - Начало работы Transmiter SKAD Signature
+[2019-12-26 13:58:42Z] - INFO - Обработка отчетности - 311p
+[2019-12-26 13:58:47Z] - INFO - Автоматическое копирование в папку D:\SKAD\transmiterSKAD\temp\work произведено не было!
+[2019-12-26 13:58:47Z] - INFO - Сохраняем текущею ключевую дискету
+[2019-12-26 13:58:47Z] - INFO - Загружаем ключевую дискету d:\SKAD\Floppy\foiv
+[2019-12-26 13:58:47Z] - INFO - Подписываем файлы
+[2019-12-26 13:58:47Z] - INFO - Подписываем файлы
+[2019-12-26 13:58:47Z] - INFO - Обрабатываем файл SFC017102803_720320191223_288000021900091480_700.XML
+[2019-12-26 13:58:48Z] - INFO - Подписываем файлы
+[2019-12-26 13:58:48Z] - INFO - Обрабатываем файл SFC017102803_720320191223_288000021900091481_700.XML
+[2019-12-26 13:58:49Z] - ERRR - Ошибка при работе программы C:\Program Files\MDPREI\spki\spki1utl.exe
+[2019-12-26 14:00:17Z] - INFO - Начало работы Transmiter SKAD Signature
+[2019-12-26 14:00:22Z] - INFO - Обработка отчетности - 311p
+[2019-12-26 14:01:28Z] - INFO - Начало работы Transmiter SKAD Signature
+[2019-12-26 14:01:32Z] - INFO - Обработка отчетности - 311p
+[2019-12-26 14:02:40Z] - INFO - Начало работы Transmiter SKAD Signature
+[2019-12-26 14:02:43Z] - INFO - Обработка отчетности - 311p
+[2019-12-26 14:02:48Z] - INFO - Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191223_288000021900091480_700.XML Destination: D:\SKAD\transmiterSKAD\temp\
+311p\Arhive\26122019\SFC017102803_720320191223_288000021900091480_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191223_288000021900091481_700.XML Destination: D:\SKAD\transmiterSKAD\temp\
+311p\Arhive\26122019\SFC017102803_720320191223_288000021900091481_700.XML".
+
+[2019-12-26 14:02:48Z] - INFO - Автоматическое копирование в папку D:\SKAD\transmiterSKAD\temp\work произведено не было!
+[2019-12-26 14:02:48Z] - INFO - Сохраняем текущею ключевую дискету
+[2019-12-26 14:02:48Z] - INFO - Загружаем ключевую дискету d:\SKAD\Floppy\foiv
+[2019-12-26 14:02:48Z] - INFO - Подписываем файлы
+[2019-12-26 14:02:48Z] - INFO - Подписываем файлы
+[2019-12-26 14:02:48Z] - INFO - Обрабатываем файл SFC017102803_720320191223_288000021900091480_700.XML
+[2019-12-26 14:02:49Z] - INFO - Подписываем файлы
+[2019-12-26 14:02:49Z] - INFO - Обрабатываем файл SFC017102803_720320191223_288000021900091481_700.XML
+[2019-12-26 14:02:50Z] - ERRR - Ошибка при работе программы C:\Program Files\MDPREI\spki\spki1utl.exe
+[2019-12-26 14:03:48Z] - INFO - Начало работы Transmiter SKAD Signature
+[2019-12-26 14:03:57Z] - INFO - Обработка отчетности - 311p
+[2019-12-26 14:04:04Z] - INFO - Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191223_288000021900091480_700.XML Destination: D:\SKAD\transmiterSKAD\temp\
+311p\Arhive\26122019\SFC017102803_720320191223_288000021900091480_700.XML".
+Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191223_288000021900091481_700.XML Destination: D:\SKAD\transmiterSKAD\temp\
+311p\Arhive\26122019\SFC017102803_720320191223_288000021900091481_700.XML".
+
+[2019-12-26 14:04:04Z] - INFO - Автоматическое копирование в папку D:\SKAD\transmiterSKAD\temp\work произведено не было!
+[2019-12-26 14:04:04Z] - INFO - Сохраняем текущею ключевую дискету
+[2019-12-26 14:04:04Z] - INFO - Загружаем ключевую дискету d:\SKAD\Floppy\foiv
+[2019-12-26 14:04:04Z] - INFO - Подписываем файлы
+[2019-12-26 14:04:04Z] - INFO - Подписываем файлы
+[2019-12-26 14:04:04Z] - INFO - Обрабатываем файл SFC017102803_720320191223_288000021900091480_700.XML
+[2019-12-26 14:04:11Z] - INFO - Подписываем файлы
+[2019-12-26 14:04:11Z] - INFO - Обрабатываем файл SFC017102803_720320191223_288000021900091481_700.XML
+[2019-12-26 14:04:12Z] - INFO - Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191223_288000021900091480_700.XML".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191223_288000021900091481_700.XML".
+
+[2019-12-26 14:04:12Z] - INFO - Performing the operation "Rename File" on target "Item: D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191223_288000021900091480_700.XML.test Destination: D:\SKAD\transmiterSKA
+D\temp\work\SFC017102803_720320191223_288000021900091480_700.XML".
+Performing the operation "Rename File" on target "Item: D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191223_288000021900091481_700.XML.test Destination: D:\SKAD\transmiterSKA
+D\temp\work\SFC017102803_720320191223_288000021900091481_700.XML".
+
+[2019-12-26 14:04:12Z] - INFO - Архивируем файлы
+[2019-12-26 14:04:13Z] - INFO - Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191223_288000021900091480_700.XML".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191223_288000021900091481_700.XML".
+
+[2019-12-26 14:04:13Z] - INFO - Performing the operation "Rename File" on target "Item: D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191223_288000021900091480_700.XML.gz Destination: D:\SKAD\transmiterSKAD\
+temp\work\SFC017102803_720320191223_288000021900091480_700.XML".
+Performing the operation "Rename File" on target "Item: D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191223_288000021900091481_700.XML.gz Destination: D:\SKAD\transmiterSKAD\
+temp\work\SFC017102803_720320191223_288000021900091481_700.XML".
+
+[2019-12-26 14:04:14Z] - INFO - Шифруем файлы
+[2019-12-26 14:04:14Z] - INFO - Шифруем файлы ключём ФНС
+[2019-12-26 14:04:14Z] - INFO - Обрабатываем файл SFC017102803_720320191223_288000021900091480_700.XML
+[2019-12-26 14:04:15Z] - INFO - Шифруем файлы ключём ФНС
+[2019-12-26 14:04:15Z] - INFO - Обрабатываем файл SFC017102803_720320191223_288000021900091481_700.XML
+[2019-12-26 14:04:16Z] - INFO - Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191223_288000021900091480_700.XML".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191223_288000021900091481_700.XML".
+
+[2019-12-26 14:04:16Z] - INFO - Performing the operation "Rename File" on target "Item: D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191223_288000021900091480_700.XML.test Destination: D:\SKAD\transmiterSKA
+D\temp\work\SFC017102803_720320191223_288000021900091480_700.XML".
+Performing the operation "Rename File" on target "Item: D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191223_288000021900091481_700.XML.test Destination: D:\SKAD\transmiterSKA
+D\temp\work\SFC017102803_720320191223_288000021900091481_700.XML".
+
+[2019-12-26 14:04:22Z] - INFO - Начинаем архивацию BN028031912260001.arj ...
+[2019-12-26 14:04:22Z] - INFO - Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191223_288000021900091480_700.XML".
+Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\work\SFC017102803_720320191223_288000021900091481_700.XML".
+
+[2019-12-26 14:04:22Z] - INFO - Подписываем файлы
+[2019-12-26 14:04:22Z] - INFO - Обрабатываем файл BN028031912260001.arj
+[2019-12-26 14:04:23Z] - INFO - Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\work\BN028031912260001.arj".
+
+[2019-12-26 14:04:23Z] - INFO - Performing the operation "Rename File" on target "Item: D:\SKAD\transmiterSKAD\temp\work\BN028031912260001.arj.test Destination: D:\SKAD\transmiterSKAD\temp\work\BN028031912260001.a
+rj".
+
+[2019-12-26 14:04:23Z] - INFO - Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\work\BN028031912260001.arj Destination: D:\SKAD\transmiterSKAD\temp\311p\Arhive\26122019\BN02803191
+2260001.arj".
+
+[2019-12-26 14:04:23Z] - INFO - Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\work\BN028031912260001.arj Destination: D:\SKAD\transmiterSKAD\temp\Post\BN028031912260001.arj".
+
+[2019-12-26 14:04:23Z] - INFO - Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\work\BN028031912260001.arj".
+
+[2019-12-26 14:04:23Z] - INFO - Отправка почтового сообщения
+[2019-12-26 14:04:33Z] - INFO - Отправлено 2 файлов
+[2019-12-26 14:04:33Z] - INFO - Загружаем исходную ключевую дискету
+[2019-12-26 14:04:33Z] - INFO - Конец работы скрипта!

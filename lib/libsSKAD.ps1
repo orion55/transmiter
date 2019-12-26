@@ -34,15 +34,18 @@ function SKAD_Encrypt {
             if ($fss) {
                 #$arguments = "-sign -encrypt -profile $profile -registry -algorithm 1.2.643.7.1.1.2.2 -in $($file.FullName) -out $tmpFile -reclist $recList -silent $logSpki"
                 $arguments = "-sign -encrypt -profile $profile -algorithm 1.2.643.7.1.1.2.2 -in $($file.FullName) -out $tmpFile -reclist $fnsFssList -silent $logSpki"
+                Write-Log -EntryType Information -Message "Шифруем файлы ключами ФНС и ФСС"
             }
             else {
                 $arguments = "-sign -encrypt -profile $profile -algorithm 1.2.643.7.1.1.2.2 -in $($file.FullName) -out $tmpFile -reclist $fnsList -silent $logSpki"
+                Write-Log -EntryType Information -Message "Шифруем файлы ключём ФНС"
             }
         }
         else {
             #$arguments = "-sign -profile $profile -registry -algorithm 1.2.643.7.1.1.2.2 -data $($file.FullName) -out $tmpFile -reclist $recList -silent $logSpki"
             $arguments = "-sign -profile $profile -algorithm 1.2.643.7.1.1.2.2 -data $($file.FullName) -out $tmpFile -silent $logSpki"
             #$arguments = "-sign -algorithm 1.2.643.7.1.1.2.2 -data $($file.FullName) -out $tmpFile"
+            Write-Log -EntryType Information -Message "Подписываем файлы"
         }
 
         Write-Log -EntryType Information -Message "Обрабатываем файл $($file.Name)"
@@ -68,7 +71,6 @@ function SKAD_Decrypt {
         $decrypt = $false,
         [string]$maskFiles = "*.*")
 
-    Write-Log -EntryType Information -Message "Начинаем преобразование..."
     $mask = Get-ChildItem -path $work $maskFiles
 
     foreach ($file in $mask) {
@@ -77,9 +79,11 @@ function SKAD_Decrypt {
         $arguments = ''
         if ($decrypt) {
             $arguments = "-decrypt -verify -delete -1 -profile $profile -in $($file.FullName) -out $tmpFile -silent $logSpki"
+            Write-Log -EntryType Information -Message "Дешифруем файлы"
         }
         else {
             $arguments = "-verify -delete -1 -profile $profile -in $($file.FullName) -out $tmpFile -silent $logSpki"
+            Write-Log -EntryType Information -Message "Снимаем подпись с файлов"
         }
 
         Write-Log -EntryType Information -Message "Обрабатываем файл $($file.Name)"

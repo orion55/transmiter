@@ -59,7 +59,7 @@ elseif ($form -eq "none") {
 	}
 	Write-Log -EntryType Information -Message "Обработка отчетности - $form"
 
-	$title = "Файлы отчетности скопированы в папку Work?"
+	$title = "Файлы отчетности скопированы в папку $work ?"
 	$message = "Выберите вариант:"
 	$yes = New-Object System.Management.Automation.Host.ChoiceDescription "Да - &0", "Да"
 	$no = New-Object System.Management.Automation.Host.ChoiceDescription "Нет - &1", "Нет"
@@ -71,12 +71,18 @@ elseif ($form -eq "none") {
 	}
 
 	if ($nobegin) {
-		$msg = "Файлы отчетности не будут скопированы в папку $work"
+		$arhivePath = $archDir + '\' + $curDate
+		if (!(Test-Path $arhivePath)) {
+			New-Item -ItemType directory -Path $arhivePath | out-Null
+		}
+		$msg = Copy-Item "$work\*.xml" -Destination $arhivePath -Force -Verbose *>&1
+		Write-Log -EntryType Information -Message ($msg | Out-String)
 	}
 	else {
 		$msg = "Файлы отчетности будут скопированы в папку $work"
+		Write-Log -EntryType Information -Message $msg
 	}
-	Write-Log -EntryType Information -Message $msg
+
 }
 
 if ($nobegin) {
@@ -204,11 +210,10 @@ Write-Log -EntryType Information -Message ($msg | Out-String)
 
 SKAD_Encrypt -encrypt $false -maskFiles "*.$extArchiver"
 
-Write-Log -EntryType Information -Message "Копируем файл архива $fname в $arhivePath"
-Copy-Item "$work\$fname" -Destination $arhivePath -Force
-Write-Log -EntryType Information -Message "Копируем файл архива $fname в $outcoming_post"
-Copy-Item "$work\$fname" -Destination $outcoming_post -Force
-
+$msg = Copy-Item "$work\$fname" -Destination $arhivePath -Force -Verbose *>&1
+Write-Log -EntryType Information -Message ($msg | Out-String)
+$msg = Copy-Item "$work\$fname" -Destination $outcoming_post -Force -Verbose *>&1
+Write-Log -EntryType Information -Message ($msg | Out-String)
 $msg = Remove-Item "$work\$fname" -Verbose *>&1
 Write-Log -EntryType Information -Message ($msg | Out-String)
 
