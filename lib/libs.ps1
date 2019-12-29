@@ -56,26 +56,3 @@ function createDir($dirList) {
 		}
 	}
 }
-<#function Test_dir($dirs1) {
-	foreach ($d1 in $dirs1) {
-		#проверка существования путей
-		if (!(Test-Path -Path $d1)) {
-			Write-Host "Путь $d1 не найден!" -ForegroundColor Red
-			Write-Host "Нажмите любую клавишу для продолжения"
-			Read-Host "Нажмите Enter"
-			Exit
-		}
-	}
-}
-
-function Test_files($files) {
-	foreach ($f1 in $files) {
-		#проверка существования файлов
-		if (!(Test-Path $f1)) {
-			Write-Host "Файл $f1 не найден!" -ForegroundColor Red
-			Write-Host "Нажмите любую клавишу для продолжения"
-			Read-Host "Нажмите Enter"
-			Exit
-		}
-	}
-}#>

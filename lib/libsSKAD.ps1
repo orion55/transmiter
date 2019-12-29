@@ -122,3 +122,24 @@ function SKAD_archive {
         exit
     }
 }
+
+function getArchivePath {
+    param (
+        [ValidateSet('311p', 'nalog')]
+        [string]$form = "none"
+    )
+    [string]$archDir = ''
+    if ($form -eq '311p') {
+        $archDir = $311Archive
+    }
+    elseif ($form -eq 'nalog') {
+        $archDir = $311JurArchive
+    }
+
+    $arhivePath = $archDir + '\' + $curDate
+    if (!(Test-Path $arhivePath)) {
+        New-Item -ItemType directory -Path $arhivePath | out-Null
+    }
+
+    return $arhivePath
+}
