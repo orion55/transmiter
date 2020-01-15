@@ -1,0 +1,19 @@
+﻿[2020-01-15 10:22:33Z] - ERRR - Не найдены arj-файлы в D:\SKAD\transmiterSKAD\temp\work
+[2020-01-15 10:22:50Z] - INFO - Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\work\BN028032001140001.arj Destination: D:\SKAD\transmiterSKAD\temp\311p\Arhive\15012020\BN02803200
+1140001.arj".
+
+[2020-01-15 10:22:50Z] - INFO - Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\work\BN028032001140001.arj Destination: D:\SKAD\transmiterSKAD\temp\Post\BN028032001140001.arj".
+
+[2020-01-15 10:22:50Z] - INFO - Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\work\BN028032001140001.arj".
+
+[2020-01-15 10:22:50Z] - INFO - Отправка почтового сообщения
+[2020-01-15 10:22:52Z] - INFO - Файлы отправлены, 43 шт.
+[2020-01-15 10:23:45Z] - INFO - Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\work\AN028032001140001.arj Destination: D:\SKAD\transmiterSKAD\temp\311jur\Arhive\15012020\AN028032
+001140001.arj".
+
+[2020-01-15 10:23:45Z] - INFO - Performing the operation "Copy File" on target "Item: D:\SKAD\transmiterSKAD\temp\work\AN028032001140001.arj Destination: D:\SKAD\transmiterSKAD\temp\Post\AN028032001140001.arj".
+
+[2020-01-15 10:23:45Z] - INFO - Performing the operation "Remove File" on target "D:\SKAD\transmiterSKAD\temp\work\AN028032001140001.arj".
+
+[2020-01-15 10:23:45Z] - INFO - Отправка почтового сообщения
+[2020-01-15 10:23:47Z] - INFO - Файлы отправлены, 2 шт.

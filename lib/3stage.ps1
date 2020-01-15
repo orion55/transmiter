@@ -42,6 +42,20 @@ if ($form -eq "none") {
 
 $arhivePath = getArchivePath -form $form
 
+$arjFiles = Get-ChildItem "$work\*.arj"
+$xmlCount = 0
+ForEach ($file in $arjFiles) {
+    $AllArgs = @('l', $($file.FullName))
+    $lastLog = &$arj32 $AllArgs
+    $lastLog = $lastLog | Select-Object -Last 1
+
+    $regex = "^\s+(\d+)\sfiles"
+    $match = [regex]::Match($lastLog, $regex)
+    if ($match.Success) {
+        $xmlCount += [int]$match.Captures.groups[1].value
+    }
+}
+
 $msg = Copy-Item "$work\*.arj" -Destination $arhivePath -Force -Verbose *>&1
 Write-Log -EntryType Information -Message ($msg | Out-String)
 $msg = Copy-Item "$work\*.arj" -Destination $outcoming_post -Force -Verbose *>&1
@@ -49,20 +63,20 @@ Write-Log -EntryType Information -Message ($msg | Out-String)
 $msg = Remove-Item "$work\*.arj" -Verbose *>&1
 Write-Log -EntryType Information -Message ($msg | Out-String)
 
-$body = "Файлы отправлены"
+$body = "Файлы отправлены, $xmlCount шт."
 Write-Log -EntryType Information -Message "Отправка почтового сообщения"
 if (Test-Connection $mailServer -Quiet -Count 2) {
-	if ($form -eq '311p') {
-		$mailAddr = $mailAddrFiz
-	}
-	elseif ($form -eq 'nalog') {
-		$mailAddr = $mailAddrJur
-	}
-	$title = "Отправка в $curDate ИФНС"
-	$encoding = [System.Text.Encoding]::UTF8
-	Send-MailMessage -To $mailAddr -Body $body -Encoding $encoding -From $mailFrom -Subject $title -SmtpServer $mailServer
+    if ($form -eq '311p') {
+        $mailAddr = $mailAddrFiz
+    }
+    elseif ($form -eq 'nalog') {
+        $mailAddr = $mailAddrJur
+    }
+    $title = "Отправка в $curDate ИФНС"
+    $encoding = [System.Text.Encoding]::UTF8
+    Send-MailMessage -To $mailAddr -Body $body -Encoding $encoding -From $mailFrom -Subject $title -SmtpServer $mailServer
 }
 else {
-	Write-Log -EntryType Error -Message "Не удалось соединиться с почтовым сервером $mailServer"
+    Write-Log -EntryType Error -Message "Не удалось соединиться с почтовым сервером $mailServer"
 }
 Write-Log -EntryType Information -Message $body
